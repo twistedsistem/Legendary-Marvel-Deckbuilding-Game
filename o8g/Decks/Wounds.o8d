@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<deck game="ae9f4418-76f5-4df5-97ab-f5ad6dcd7852">
+  <section name="Shared" shared="True">
+    <card qty="30" id="440325eb-9246-4e73-98a3-8294669692cc">Wound</card>
+  </section>
+  <section name="Main" shared="False" />
+  <section name="Main2" shared="False" />
+  <notes><![CDATA[]]></notes>
+</deck>
