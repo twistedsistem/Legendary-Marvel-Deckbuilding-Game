@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game name="Legendary - A Marvel Deckbuilding Game" id="ae9f4418-76f5-4df5-97ab-f5ad6dcd7852" octgnVersion="3.1.0.0" version="1.0.0.0" 
     markersize="25" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" tags="cards standard" description="Legendary - A Marvel Deckbuilding Game" setsurl="http://www.octgn.net" 
-	gameurl="http://www.octgn.net" authors="twistedsistem" iconurl="images/Legendary.jpg">
+  gameurl="http://www.octgn.net" authors="twistedsistem" iconurl="https://raw.github.com/twistedsistem/Legendary-Marvel-Deckbuilding-Game/o8g/images/icon.jpg">
     <scripts>
       <script src="scripts/actions.py" />
     </scripts>
@@ -14,7 +14,7 @@
         <property name="Suit" type="String" textKind="Tokens" />
         <property name="Rank" type="String" textKind="Tokens" />
     </card>
-    <table name="Table" visibility="undefined" ordered="False" width="1300" height="808" background="background/background.jpg" board="background/Legendaryboard.jpg" boardPosition="-650,-370,1300,808" backgroundStyle="uniformToFill">
+    <table name="Table" visibility="undefined" ordered="False" width="1300" height="808" background="background/background.jpg" board="background/Tabletop.jpg" boardPosition="-650,-370,1300,808" backgroundStyle="uniformToFill">
         <groupaction menu="Draw" shortcut="ctrl+D" default="True" execute="draw" />
         <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
         <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
