@@ -2,7 +2,34 @@
 <set name="Core" id="039b8eb1-e61d-4349-99ab-f382919e74e8" gameId="ae9f4418-76f5-4df5-97ab-f5ad6dcd7852" gameVersion="1.0.0" version="0.1">
 
 <cards>
- <card id="440325eb-9246-4e73-98a3-8294669692cc" name="Wound"><property name="Suit" value="Heart"/><property name="Rank" value="Ace"/></card>
+ <card id="440325eb-9246-4e73-98a3-8294669692cc" name="Wound">
+ 	<property name="Suit" value="Heart"/>
+ 	<property name="Rank" value="Ace"/>
+ </card>
+ <card id="aa97efe1-8d65-4724-a899-35937046103d" name="Bystandard">
+ 	<property name="Suit" value="Heart"/>
+ 	<property name="Rank" value="Ace"/>
+ </card>
+ <card id="62449fae-11b0-42a9-944a-60c53e89d531" name="Scheme Twist">
+ 	<property name="Suit" value="Heart"/>
+ 	<property name="Rank" value="Ace"/>
+ </card>
+ <card id="83f00c46-0f7d-46a6-a524-d6ca9db23958" name="Master Strike">
+ 	<property name="Suit" value="Heart"/>
+ 	<property name="Rank" value="Ace"/>
+ </card>
+ <card id="f177c8eb-721a-4675-a611-22e0917488f9" name="SHIELD Agent">
+ 	<property name="Suit" value="Heart"/>
+ 	<property name="Rank" value="Ace"/>
+ </card>
+ <card id="724fdb30-a0b7-4d09-ae06-2b6d5891710e" name="SHIELD Officer">
+ 	<property name="Suit" value="Heart"/>
+ 	<property name="Rank" value="Ace"/>
+ </card>
+ <card id="f08519c0-d295-479b-8702-ea331ffcc893" name="SHIELD Trooper">
+ 	<property name="Suit" value="Heart"/>
+ 	<property name="Rank" value="Ace"/>
+ </card>
 </cards>
 
 </set>

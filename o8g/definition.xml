@@ -43,23 +43,62 @@
     </hand>
   </player>
   <shared>
-    <group name="Deck" shortcut="ctrl+E" visibility="none" width="63" height="88" icon="groups/deck.png">
-        <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
-        <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
-        <groupaction menu="Deal X Cards To Table(face down)" execute="dealManyToTableDown" />
-       <groupaction menu="Draw" shortcut="ctrl+D" execute="draw" />
-       <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
-       <groupaction menu="Draw X Cards Face Down" execute="drawManyDown" />
-       <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
-       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+    <group name="Bystandards" visibility="all" width="63" height="88" icon="groups/deck.png" collapsed="True">
+      <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
+      <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
+      <groupaction menu="Deal X Cards To Table(face down)" execute="dealManyToTableDown" />
+      <groupaction menu="Draw" shortcut="ctrl+D" execute="draw" />
+      <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
+      <groupaction menu="Draw X Cards Face Down" execute="drawManyDown" />
+      <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
+      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
     </group>
-    <group name="Discard" shortcut="del" visibility="all" width="63" height="88" icon="groups/discardpile.png">
-       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
-       <groupaction menu="Shuffle Into Deck" execute="shuffleIntoDeck" />
+    <group name="SHIELD Officer" visibility="all" width="63" height="88" icon="groups/deck.png" collapsed="False">
+      <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
+      <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
+      <groupaction menu="Deal X Cards To Table(face down)" execute="dealManyToTableDown" />
+      <groupaction menu="Draw" shortcut="ctrl+D" execute="draw" />
+      <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
+      <groupaction menu="Draw X Cards Face Down" execute="drawManyDown" />
+      <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
+      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+    </group>
+    <group name="SHIELD Hero" visibility="none" width="63" height="88" icon="groups/deck.png" collapsed="True">
+      <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
+      <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
+      <groupaction menu="Deal X Cards To Table(face down)" execute="dealManyToTableDown" />
+      <groupaction menu="Draw" shortcut="ctrl+D" execute="draw" />
+      <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
+      <groupaction menu="Draw X Cards Face Down" execute="drawManyDown" />
+      <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
+      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+    </group>
+    <group name="Wounds" visibility="all" width="63" height="88" icon="groups/deck.png" collapsed="True">
+      <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
+      <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
+      <groupaction menu="Deal X Cards To Table(face down)" execute="dealManyToTableDown" />
+      <groupaction menu="Draw" shortcut="ctrl+D" execute="draw" />
+      <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
+      <groupaction menu="Draw X Cards Face Down" execute="drawManyDown" />
+      <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
+      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+    </group>
+    <group name="Master Mind" visibility="all" width="63" height="88" icon="groups/discardpile.png" collapsed="False">
+      <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
+      <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
+      <groupaction menu="Deal X Cards To Table(face down)" execute="dealManyToTableDown" />
+      <groupaction menu="Draw" shortcut="ctrl+D" execute="draw" />
+      <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
+      <groupaction menu="Draw X Cards Face Down" execute="drawManyDown" />
+      <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
+      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
     </group>
   </shared>
   <sharedDeck>
-      <section name="Shared" group="Deck" />
-      <section name="Shared2" group="Discard" />
+      <section name="Bystandards" group="Bystandards" />
+      <section name="Wounds" group="Wounds" />
+      <section name="SHIELD Officer" group="SHIELD Officer" />
+      <section name="SHIELD Hero" group="SHIELD Hero" />
+      <section name="MasterMind" group="Master Mind" />
   </sharedDeck>
 </game>
