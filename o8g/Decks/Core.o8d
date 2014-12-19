@@ -9,6 +9,10 @@
   </section>
   <section name="SHIELD Officer" shared="True">
 	<card qty="30" id="724fdb30-a0b7-4d09-ae06-2b6d5891710e">S.H.I.E.L.D. Officer</card>
+  <card qty="1" id="08fa2741-6ad3-4bc4-86d3-a91cca7810ee">Silent Sniper</card>
+  <card qty="3" id="239ff136-457e-4a20-80cd-e83aa15ade1b">Covert Operation</card>
+  <card qty="5" id="97c00d4e-4ef4-4b89-a39f-7c45a1146d73">Dangerous Rescue</card>
+  <card qty="5" id="c341df86-f167-4f6d-8fe6-e475170534f4">Mission Accomplished</card>
   </section>
   <section name="SHIELD Hero" shared="True">
 	<card qty="40" id="f177c8eb-721a-4675-a611-22e0917488f9">S.H.I.E.L.D. Agent</card>

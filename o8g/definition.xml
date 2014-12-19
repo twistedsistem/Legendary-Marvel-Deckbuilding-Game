@@ -11,8 +11,22 @@
         <globalvariable name="dealer" value="1"/>
     </globalvariables>
     <card back="cards/back.png" front="cards/front.png" width="63" height="88" cornerRadius="0">
-        <property name="Suit" type="String" textKind="Tokens" />
-        <property name="Rank" type="String" textKind="Tokens" />
+      <property name="Name"  type="String"/>
+      <property name="CardType"  type="String"/>
+      <property name="HeroOrVillianName"  type="String"/>
+      <property name="Affiliation"  type="String"/>
+      <property name="Type"  type="String"/>
+      <property name="Cost"  type="String"/>
+      <property name="Recruit"  type="String"/>
+      <property name="Attack"  type="String"/>
+      <property name="Victory"  type="String"/>
+      <property name="PrimaryAbility"  type="String"/>
+      <property name="SuperAbilityTrigger"  type="String"/>
+      <property name="SuperAbility"  type="String"/>
+      <property name="VillainAbility"  type="String"/>
+      <property name="Card Text"  type="String"/>
+      <property name="ActionScript"  type="String"/>
+      <property name="AutoScript"  type="String"/>
     </card>
     <table name="Table" visibility="undefined" ordered="False" width="1300" height="808" background="background/background.jpg" board="background/Tabletop.jpg" boardPosition="-650,-370,1300,808" backgroundStyle="uniformToFill">
         <groupaction menu="Draw" shortcut="ctrl+D" default="True" execute="draw" />
