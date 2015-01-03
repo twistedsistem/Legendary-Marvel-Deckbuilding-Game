@@ -1,25 +1,146 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <deck game="ae9f4418-76f5-4df5-97ab-f5ad6dcd7852">
-  <section name="MasterMind" shared="True">
-    <card qty="11" id="62449fae-11b0-42a9-944a-60c53e89d531">Scheme Twist</card>
+  <section name="LoadDeck" shared="True">
+    <card qty="30" id="aa97efe1-8d65-4724-a899-35937046103d">Bystander</card>
     <card qty="5" id="83f00c46-0f7d-46a6-a524-d6ca9db23958">Master Strike</card>
-  </section>
-  <section name="Bystandards" shared="True">
-	<card qty="30" id="aa97efe1-8d65-4724-a899-35937046103d">Bystandard</card>
-  </section>
-  <section name="SHIELD Officer" shared="True">
-	<card qty="30" id="724fdb30-a0b7-4d09-ae06-2b6d5891710e">S.H.I.E.L.D. Officer</card>
-  <card qty="1" id="08fa2741-6ad3-4bc4-86d3-a91cca7810ee">Silent Sniper</card>
-  <card qty="3" id="239ff136-457e-4a20-80cd-e83aa15ade1b">Covert Operation</card>
-  <card qty="5" id="97c00d4e-4ef4-4b89-a39f-7c45a1146d73">Dangerous Rescue</card>
-  <card qty="5" id="c341df86-f167-4f6d-8fe6-e475170534f4">Mission Accomplished</card>
-  </section>
-  <section name="SHIELD Hero" shared="True">
-	<card qty="40" id="f177c8eb-721a-4675-a611-22e0917488f9">S.H.I.E.L.D. Agent</card>
-    <card qty="20" id="f08519c0-d295-479b-8702-ea331ffcc893">S.H.I.E.L.D. Trooper</card>
-  </section>
-  <section name="Wounds" shared="True">
+    <card qty="40" id="f177c8eb-721a-4675-a611-22e0917488f9">SHIELD Agent</card>
+    <card qty="30" id="724fdb30-a0b7-4d09-ae06-2b6d5891710e">SHIELD Officer</card>
+    <card qty="20" id="f08519c0-d295-479b-8702-ea331ffcc893">SHIELD Trooper</card>
+    <card qty="11" id="62449fae-11b0-42a9-944a-60c53e89d531">Scheme Twist</card>
     <card qty="30" id="440325eb-9246-4e73-98a3-8294669692cc">Wound</card>
+    <card qty="1" id="93652a42-4af5-42db-b8e2-b5faf7c672af">The Legacy Virus</card>
+    <card qty="1" id="957e9c0c-08b0-4a25-ac4f-bfa814e91942">Midtown Bank Robbery</card>
+    <card qty="1" id="71215e80-9e2c-4d2f-9868-125878288ca5">Negative Zone Prison Breakout</card>
+    <card qty="1" id="c05c5137-56a7-42e6-bdc3-dba4c1eb0e58">Portals to the Dark Dimension</card>
+    <card qty="1" id="c28a253d-3c7d-48c4-b6fb-2da1e0ea07ce">Replace Earth's Leaders with Killbots</card>
+    <card qty="1" id="6d01ed29-a7b2-4a2a-ac9c-66d918897334">Secret Invasion of the Skrull Shapeshifters</card>
+    <card qty="1" id="b44d031e-633b-4ecd-ad82-72f9dfa90e24">Super Hero Civil War</card>
+    <card qty="1" id="c75fd87c-8a45-4b2a-8438-5385cf6ed07f">Unleash The Power of the Cosmic Cube</card>
+    <card qty="1" id="13d2d08c-79b5-44a8-b2b8-4f6c16ff859e">Dr. Doom</card>
+    <card qty="1" id="0251298a-e0f7-4eb4-97d3-8687416939e7">Dark Technology</card>
+    <card qty="1" id="3deb53f9-065f-4dda-a3cc-9f15ec7c714d">Monarch's Decree</card>
+    <card qty="1" id="1b21d379-cf49-4547-ad9a-14746c0a4d28">Secrets of Time Travel</card>
+    <card qty="1" id="b414280c-56b8-48f9-8ec5-3d0f089de445">Treasures of Latveria</card>
+    <card qty="1" id="7a406687-ea87-470a-a97a-5fb069dcfca3">Loki</card>
+    <card qty="1" id="655ed974-f4b7-412e-9b22-d3d39fb0ee18">Cruel Ruler</card>
+    <card qty="1" id="b5f72100-0cff-45bf-b845-729d012d938f">Maniacal Tyrant</card>
+    <card qty="1" id="ee473cda-5479-4f53-b299-b7d402993148">Vanishing Illusions</card>
+    <card qty="1" id="f757896a-2267-420a-9a73-8a7184c8540c">Whispers and Lies</card>
+    <card qty="1" id="5e40754a-c514-4545-b161-43c477fad784">Magneto</card>
+    <card qty="1" id="85e865d4-afbe-4547-bdaf-41bfc71111c4">Bitter Captor</card>
+    <card qty="1" id="687d43d4-36d3-46a9-9ecb-bc93c57df0d7">Crushing Shockwave</card>
+    <card qty="1" id="a0a8cdd1-0455-495c-a451-92ddded531df">Electromagnetic Bubble</card>
+    <card qty="1" id="cda72ca9-0dee-4212-9502-fb9ca36d3a34">Xavier's Nemesis</card>
+    <card qty="1" id="8aa9ecb0-4a33-437f-81f1-2b0b5a77794b">Red Skull</card>
+    <card qty="1" id="9b9a12a5-2895-44b2-8b73-8f803303ce6f">Endless Resources</card>
+    <card qty="1" id="4e944186-4fe3-4aca-b862-1d52f2bb6635">Hydra Conspiracy</card>
+    <card qty="1" id="a4933f26-458b-4c6e-bcdb-8106bb562906">Negablast Grenades</card>
+    <card qty="1" id="500ec7e7-4f37-47d6-8c38-089cb6899bbf">Ruthless Dictator</card>
+    <card qty="2" id="238db299-1eb7-45db-a425-c3c4d759b5ad">Blob</card>
+    <card qty="2" id="a16ac39c-e7f5-47c4-bd5e-a7a3230cd0dd">Juggernaut</card>
+    <card qty="2" id="e6c5cc3c-96e6-4783-b6f2-00e30f171c6b">Mystique</card>
+    <card qty="2" id="6b1992c1-ddc9-40e3-97ab-029246364572">Sabretooth</card>
+    <card qty="1" id="ff5334ba-a3e1-4d45-a453-ac6f912d2c6c">Destroyer</card>
+    <card qty="2" id="25d8adca-b2e5-4abe-a55b-b49e970c7f38">Enchantress</card>
+    <card qty="3" id="c16c8845-e950-49b1-bbd5-fa72cdae2cd8">Frost Giant</card>
+    <card qty="2" id="f02061ae-2717-4659-ac69-597ff710f4d8">Ymir, Frost Giant King</card>
+    <card qty="3" id="f3487ec6-5498-4375-9c59-c5477bb85439">Endless Armies of Hydra</card>
+    <card qty="3" id="576fb410-6adf-46d4-9085-35a9f47c383b">Hydra Kidnappers</card>
+    <card qty="1" id="5c73f1b3-ab9d-4140-b270-8956343ad71e">Supreme Hydra</card>
+    <card qty="1" id="56c63475-57dd-480d-b693-1e273f343e4b">Viper</card>
+    <card qty="2" id="1ed722ed-28b0-4ebb-aeb1-383196059e72">Baron Zemo</card>
+    <card qty="2" id="7ad02ba2-616c-4d88-80f0-c228852ca12b">Melter</card>
+    <card qty="2" id="8ce5553d-8378-4461-9a07-781a736632cd">Ultron</card>
+    <card qty="2" id="fbee469d-f2be-4f52-bd21-d70e4597fa81">Whirlwind</card>
+    <card qty="2" id="caf38b52-01b8-4644-a3f8-f23761a89d2e">Abomination</card>
+    <card qty="2" id="9b1f573e-4299-4b99-bec5-2b0baae4f603">Maestro</card>
+    <card qty="2" id="ecb1f98d-dcd3-400f-aa6e-3976d4944b0b">The Leader</card>
+    <card qty="2" id="f43ddb64-9f20-41a0-99c3-e3bcd3713ac7">Zzzax</card>
+    <card qty="1" id="7657b33e-04bd-46b1-8549-6e38136aa31f">Paibok The Power Skrull</card>
+    <card qty="1" id="a201aa77-e665-4bc6-84c7-8ac00a2c035d">Skrull Queen Veranke</card>
+    <card qty="3" id="03090e73-5ac5-4002-b32c-8682f281a9a7">Skrull Shapeshifters</card>
+    <card qty="3" id="a6667ca6-63f5-49bd-b07c-983f55672809">Super-Skrull</card>
+    <card qty="2" id="f6b1fcb3-c702-464a-b03e-dc7ff57f55ad">Doctor Octopus</card>
+    <card qty="2" id="af938a45-8487-4539-b402-853739256742">Green Goblin</card>
+    <card qty="2" id="e166508e-e4d3-45a8-999a-a1e6de05c4f8">The Lizard</card>
+    <card qty="2" id="5a49d7d0-cb66-4973-85e5-bf894ebe9130">Venom</card>
+  </section>
+  <section name="Henchmen" shared="True">
+    <card qty="10" id="42039ea8-ab51-4536-b55f-d2555a04a6eb">Doombot Legion</card>
+    <card qty="10" id="678ad481-6c7f-4784-967c-4366fe480671">Hand Ninjas</card>
+    <card qty="10" id="6ae53f92-f966-4d57-a131-1650b08ab455">Savage Land Mutates</card>
+    <card qty="10" id="02819f50-afa2-4666-93c1-760f1de1241f">Sentinel</card>
+  </section>
+  <section name="Heros" shared="True">
+    <card qty="3" id="239ff136-457e-4a20-80cd-e83aa15ade1b">Covert Operation</card>
+    <card qty="5" id="97c00d4e-4ef4-4b89-a39f-7c45a1146d73">Dangerous Rescue</card>
+    <card qty="5" id="c341df86-f167-4f6d-8fe6-e475170534f4">Mission Accomplished</card>
+    <card qty="1" id="08fa2741-6ad3-4bc4-86d3-a91cca7810ee">Silent Sniper</card>
+    <card qty="1" id="9b6b936b-7ced-44dd-9fe9-0fee0fceffa0">A Day Unlike Any Other</card>
+    <card qty="5" id="53cbbba5-1fb3-4a3c-bd5e-20dcbcc0292e">Avengers Assemble!</card>
+    <card qty="3" id="8f5d45a7-88c5-42d7-ade5-95e5a4c5995f">Diving Block</card>
+    <card qty="5" id="cb3b15c2-d060-4529-89d4-0d2a0eec0897">Perfect Teamwork</card>
+    <card qty="5" id="5f026192-5c08-41da-b873-822ea388a54a">Determination</card>
+    <card qty="5" id="e6b29377-08ab-42cc-8027-f5ad0fb2789a">Optic Blast</card>
+    <card qty="3" id="cbdd5e89-5b3a-4f10-9585-f3c6e129b420">Unending Energy</card>
+    <card qty="1" id="c995b802-2b24-47f1-a54b-6067de29a2ae">X-Men United</card>
+    <card qty="5" id="5a72877c-c58c-45c2-bb92-6c82e8c42ce3">Here, Hold This for a Second</card>
+    <card qty="3" id="1a22e456-79de-444e-9e87-3d6d7ff0acfe">Hey, Can I Get A Do-Over?</card>
+    <card qty="5" id="e63e2517-a7e2-45c8-bf8e-b066e6b160ed">Oddball</card>
+    <card qty="1" id="eb286ce9-d23d-40f3-a4a4-b784d66808dd">Random Acts of Unkindness</card>
+    <card qty="1" id="64f09f11-3e51-4c8d-9cfd-54b882ce86c7">Diamond Form</card>
+    <card qty="5" id="51e1bbbe-3d0b-44df-9c1e-1e8f46d527b3">Mental Discipline</card>
+    <card qty="3" id="ded89323-d1a3-4750-ab20-041ee2fa7649">Psychic Link</card>
+    <card qty="5" id="2b3fe643-fac7-4206-8e5c-fad2e9e66a67">Shadowed Thoughts</card>
+    <card qty="5" id="4a294f08-e786-411a-8138-bf65865f9754">Card Shark</card>
+    <card qty="1" id="950ccfc1-46b6-46e4-b7eb-459ef3de7e67">High Stakes Jackpot</card>
+    <card qty="3" id="0e59649c-089f-42a9-9d96-c1b6345d6d91">Hypnotic Charm</card>
+    <card qty="5" id="899e9470-d333-4415-82d1-3b691a564074">Stack the Deck</card>
+    <card qty="3" id="5d7df96c-4007-471d-8dcf-faaa96b49568">Covering Fire</card>
+    <card qty="1" id="2c33ac48-19b5-4066-935d-b26004341d5c">Impossible Trick Shot</card>
+    <card qty="5" id="214bf913-95a1-4705-8200-1076986bf943">Quick Draw</card>
+    <card qty="5" id="35c9c6c0-a3d2-4f8c-b8b5-df55cf853a2b">Team Player</card>
+    <card qty="3" id="997a6eee-3eac-4516-b17e-62da27aaf9ae">Crazed Rampage</card>
+    <card qty="5" id="70b432b8-2818-4e42-a1ef-871a8be9724d">Growing Anger</card>
+    <card qty="1" id="0c685bfe-6659-486a-b9c1-c1825cb45ba0">Hulk Smash</card>
+    <card qty="5" id="98632871-aae1-4fb1-b60a-8e4827569124">Unstoppable Hulk</card>
+    <card qty="3" id="a24b50e3-ab42-4134-aa29-116b45fa9723">Arc Reactor</card>
+    <card qty="5" id="d9d1da3e-2e49-46d7-8fbd-03e0aa2404a3">Endless Invention</card>
+    <card qty="1" id="44ebbfbb-357c-4e33-9944-a4b3f1476cad">Quantum Breakthrough</card>
+    <card qty="5" id="3db532f5-7fe3-443c-8e6c-cbf265620ff9">Repulsor Rays</card>
+    <card qty="5" id="a9e17779-2699-4795-8505-67bd397aec48">Battlefield Promotion</card>
+    <card qty="5" id="b88b8fb3-a1b0-473c-977c-0c7abab1fea2">High-Tech Weaponry</card>
+    <card qty="3" id="bfe4e99e-fd04-4b79-a2f6-20fd99d06862">Legendary Commander</card>
+    <card qty="1" id="a35cc4da-114f-4161-b1a4-dd12e10f906c">Pure Fury</card>
+    <card qty="5" id="7e3fb0af-abd2-43b5-ad00-4cc052334411">Borrowed Brawn</card>
+    <card qty="3" id="448a727e-b92b-46cd-8bbe-dc5215aea41a">Copy Powers</card>
+    <card qty="5" id="67573625-0bf4-4e06-a584-9f9de6588109">Energy Drain</card>
+    <card qty="1" id="f96dd82e-0a9f-4ba8-80b0-d7279b052237">Steal Abilities</card>
+    <card qty="5" id="e21fcb90-2fc3-4b6b-88db-c6272e20e867">Astonishing Strength</card>
+    <card qty="5" id="8b64dd84-892f-4871-a6ea-23e9757b32f4">Great Responsibility</card>
+    <card qty="1" id="dc2165db-8093-4a64-8873-6dab436e3979">The Amazing Spider-Man</card>
+    <card qty="3" id="23590024-a58b-483b-b4b3-d7cfa2ca8b3d">Web-Shooters</card>
+    <card qty="5" id="2c0af120-c656-48b4-a872-7f0342d22174">Gathering Stormclouds</card>
+    <card qty="5" id="bd2bcb57-ec43-48df-8bc9-078b7c136807">Lightning Bolt</card>
+    <card qty="3" id="3227415a-0040-4ed3-9952-4b7a0d328023">Spinning Cyclone</card>
+    <card qty="1" id="c1223eba-03f9-4833-8572-a5307337c292">Tidal Wave</card>
+    <card qty="3" id="49744343-8d61-4507-a5b9-7982634c946a">Call Lightning</card>
+    <card qty="1" id="9e74c166-873e-418f-b38b-757b73f67cd7">God of Thunder</card>
+    <card qty="5" id="7304a610-a746-4caf-b4ba-37e81f465c93">Odinson</card>
+    <card qty="5" id="be806e2b-0d0e-48f4-b1ed-5466666a1699">Surge of Power</card>
+    <card qty="1" id="4a13e98a-8cf6-4d61-a190-138004b8d5ab">Berserker Rage</card>
+    <card qty="3" id="d81c63f8-c51a-4058-b633-6eb828aa4f97">Frenzied Slashing</card>
+    <card qty="5" id="481128d1-848b-4c41-8c54-47459b15e22a">Healing Factor</card>
+    <card qty="5" id="f7512cc2-2dad-4699-ae5f-ed322b206d37">Keen Senses</card>
+  </section>
+  <section name="Villains" shared="True">
+    
+  </section>
+  <section name="Schemes" shared="True">
+    
+  </section>
+  <section name="MasterMinds" shared="True">
+    
   </section>
   <section name="Main" shared="False" />
   <section name="Main2" shared="False" />
