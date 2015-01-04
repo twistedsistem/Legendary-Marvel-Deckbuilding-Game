@@ -14,6 +14,7 @@
         <globalvariable name="bystanderAmount" value="0"/>
         <globalvariable name="masterStrikeAmount" value="0"/>
         <globalvariable name="schemeTwistAmount" value="0"/>
+        <globalvariable name="mustLeadVillain" value="0"/>
     </globalvariables>
     <card back="cards/back.png" front="cards/front.png" width="126" height="176" cornerRadius="2">
       <property name="Name"  type="String"/>
