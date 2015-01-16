@@ -215,7 +215,7 @@
 		<property name="Name" value="Bystander"/>
 		<property name="CardType" value="Bystander"/>
 		<property name="SetupNumber" value=""/>
-		<property name="HeroOrVillianName" value=""/>
+		<property name="HeroOrVillianName" value="Bystander"/>
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
@@ -519,7 +519,7 @@
 		<property name="Name" value="Doombot Legion"/>
 		<property name="CardType" value="Henchman Villain"/>
 		<property name="SetupNumber" value="1"/>
-		<property name="HeroOrVillianName" value=""/>
+		<property name="HeroOrVillianName" value="Doombot Legion"/>
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
@@ -550,6 +550,8 @@
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
 		<property name="Card Text" value="Always Leads: Doombot Legion. Master Strike: Each player with exactly 6 cards in hand reveals a Tech Hero or puts 2 cards from their hand on top of their deck."/>
+		<property name="MustLeadVillain" value="None"/>
+		<property name="MustLeadHenchmen" value="Doombot Legion"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -804,7 +806,7 @@
 		<property name="Name" value="Hand Ninjas"/>
 		<property name="CardType" value="Henchman Villain"/>
 		<property name="SetupNumber" value="2"/>
-		<property name="HeroOrVillianName" value=""/>
+		<property name="HeroOrVillianName" value="Hand Ninjas"/>
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
@@ -1101,6 +1103,8 @@
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
 		<property name="Card Text" value="Always Leads: Enemies of Asgard. Master Strike: Each player reveals a Strength Hero or gains a Wound."/>
+		<property name="MustLeadVillain" value="Enemies of Asgard"/>
+		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1139,6 +1143,8 @@
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
 		<property name="Card Text" value="Always Leads: Brotherhood. Master Strike: Each player reveals an X-Men Hero or discards down to four cards."/>
+		<property name="MustLeadVillain" value="Brotherhood"/>
+		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1165,7 +1171,7 @@
 		<property name="Name" value="Master Strike"/>
 		<property name="CardType" value="Master Strike"/>
 		<property name="SetupNumber" value=""/>
-		<property name="HeroOrVillianName" value=""/>
+		<property name="HeroOrVillianName" value="Master Strike"/>
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
@@ -1234,6 +1240,8 @@
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
 		<property name="Card Text" value="Setup: 8 Twists. 12 total Bystanders in the Villain Deck.  Special Rules: Each Villain gets +1 Attack for each Bystander it has.  Twist: Any Villain in the Bank captures 2 Bystanders. Then play the top card of the Villain Deck.  Evil Wins: When 8 Bystanders are carried away by escaping Villains."/>
+		<property name="MustLeadVillain" value="None"/>
+		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1329,6 +1337,8 @@
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
 		<property name="Card Text" value="Setup: 8 Twists. Add an extra Henchman group to the Villain Deck.  Twist: Play the top 2 cards of the Villain Deck.  Evil Wins: If 12 Villains escape."/>
+		<property name="MustLeadVillain" value="None"/>
+		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1443,6 +1453,8 @@
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
 		<property name="Card Text" value="Setup: 7 Twists. Each Twist is a Dark Portal.  Twist 1: Put the Dark Portal above the Mastermind. The Mastermind gets +1 Attack.  Twists 2-6: Put the Dark Portal in the leftmost city space that doesn't yet have a Dark Portal. Villians in that city space get +1 Attack.  Twist 7: Evil Wins!"/>
+		<property name="MustLeadVillain" value="None"/>
+		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1557,6 +1569,8 @@
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
 		<property name="Card Text" value="Always Leads: HYDRA. Master Strike: Each player KOs a Hero from their hand."/>
+		<property name="MustLeadVillain" value="Hydra"/>
+		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1576,6 +1590,8 @@
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
 		<property name="Card Text" value="Setup: 5 twists. 3 additional Twists next to this Scheme.  18 Total Bystanders in the Villian Deck.  Special Rules: Bystanders in the Villain Deck count as Killbot Villains, with Attack equal to the number of Twists next to this Scheme.  Twist: Put the Twist next to this Scheme.  Evil Wins: If 5 Killbots escape."/>
+		<property name="MustLeadVillain" value="None"/>
+		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1636,11 +1652,11 @@
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
-	<card id="6ae53f92-f966-4d57-a131-1650b08ab455" name="Savage Land Mutates">
+	<card id="6ae53f92-f966-4d57-a131-1650b08ab455" name="Savage Land Mutants">
 		<property name="Name" value="Savage Land Mutates"/>
 		<property name="CardType" value="Henchman Villain"/>
 		<property name="SetupNumber" value="3"/>
-		<property name="HeroOrVillianName" value=""/>
+		<property name="HeroOrVillianName" value="Savage Land Mutants"/>
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
@@ -1659,7 +1675,7 @@
 		<property name="Name" value="Scheme Twist"/>
 		<property name="CardType" value="Scheme Twist"/>
 		<property name="SetupNumber" value=""/>
-		<property name="HeroOrVillianName" value=""/>
+		<property name="HeroOrVillianName" value="Scheme Twist"/>
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
@@ -1690,6 +1706,8 @@
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
 		<property name="Card Text" value="Setup: 8 Twists, 6 Heros.  Skrull Villain Group Required.  Shuffle 12 random Heros from the Hero Deck into the Villain Deck.  Special Rules: Heros in the Villain Deck count as Skrull Villains with Attack equal to the Hero's Cost+2. If you defeat that hero, you gain it.  Twist: The highest-cost hero from the HQ moves into the Sewers as a Skrull Villain, as above.  Evil Wins: If 6 Heroes get into the Escaped Villains Pile."/>
+		<property name="MustLeadVillain" value="Skrull"/>
+		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1716,7 +1734,7 @@
 		<property name="Name" value="Sentinel"/>
 		<property name="CardType" value="Henchman Villain"/>
 		<property name="SetupNumber" value="4"/>
-		<property name="HeroOrVillianName" value=""/>
+		<property name="HeroOrVillianName" value="Sentinel"/>
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
@@ -1753,8 +1771,8 @@
 	<card id="f177c8eb-721a-4675-a611-22e0917488f9" name="SHIELD Agent">
 		<property name="Name" value="SHIELD Agent"/>
 		<property name="CardType" value="Hero"/>
-		<property name="SetupNumber" value=""/>
-		<property name="HeroOrVillianName" value=""/>
+		<property name="SetupNumber" value="0"/>
+		<property name="HeroOrVillianName" value="SHIELD Agent"/>
 		<property name="Affiliation" value="SHIELD"/>
 		<property name="Type" value=""/>
 		<property name="Cost" value="0"/>
@@ -1772,7 +1790,7 @@
 	<card id="724fdb30-a0b7-4d09-ae06-2b6d5891710e" name="SHIELD Officer">
 		<property name="Name" value="SHIELD Officer"/>
 		<property name="CardType" value="Hero"/>
-		<property name="SetupNumber" value=""/>
+		<property name="SetupNumber" value="0"/>
 		<property name="HeroOrVillianName" value="Maria Hill"/>
 		<property name="Affiliation" value="SHIELD"/>
 		<property name="Type" value=""/>
@@ -1791,8 +1809,8 @@
 	<card id="f08519c0-d295-479b-8702-ea331ffcc893" name="SHIELD Trooper">
 		<property name="Name" value="SHIELD Trooper"/>
 		<property name="CardType" value="Hero"/>
-		<property name="SetupNumber" value=""/>
-		<property name="HeroOrVillianName" value=""/>
+		<property name="SetupNumber" value="0"/>
+		<property name="HeroOrVillianName" value="SHIELD Trooper"/>
 		<property name="Affiliation" value="SHIELD"/>
 		<property name="Type" value=""/>
 		<property name="Cost" value="0"/>
@@ -1937,6 +1955,8 @@
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
 		<property name="Card Text" value="Setup: For 2-3 players, use 8 Twists.  For 4-5 players, use 5 Twists.  If only 2 players, use only 4 Heroes in the Hero Deck.  Twist: KO all of the Heroes in the HQ.  Evil Wins: If the Hero Deck runs out."/>
+		<property name="MustLeadVillain" value="None"/>
+		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2070,6 +2090,8 @@
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
 		<property name="Card Text" value="Setup: 8 Twists, Wound stack holds 6 Wounds per player.  Twist: Each player reveals a Tech Hero or Gains a Wound.  Evil Wins: If the Wound stack runs out."/>
+		<property name="MustLeadVillain" value="None"/>
+		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2184,6 +2206,8 @@
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
 		<property name="Card Text" value="Setup: 8 Twists. Twist: Put the Twist Next to this Scheme.  Twists 5-6: Each player gains a Wound.  Twist 7: Each player gains 3 Wounds.  Twist 8: Evil Wins!"/>
+		<property name="MustLeadVillain" value="None"/>
+		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>

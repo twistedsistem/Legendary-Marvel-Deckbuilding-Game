@@ -64,14 +64,6 @@
     <card qty="2" id="af938a45-8487-4539-b402-853739256742">Green Goblin</card>
     <card qty="2" id="e166508e-e4d3-45a8-999a-a1e6de05c4f8">The Lizard</card>
     <card qty="2" id="5a49d7d0-cb66-4973-85e5-bf894ebe9130">Venom</card>
-  </section>
-  <section name="Henchmen" shared="True">
-    <card qty="10" id="42039ea8-ab51-4536-b55f-d2555a04a6eb">Doombot Legion</card>
-    <card qty="10" id="678ad481-6c7f-4784-967c-4366fe480671">Hand Ninjas</card>
-    <card qty="10" id="6ae53f92-f966-4d57-a131-1650b08ab455">Savage Land Mutates</card>
-    <card qty="10" id="02819f50-afa2-4666-93c1-760f1de1241f">Sentinel</card>
-  </section>
-  <section name="Heros" shared="True">
     <card qty="3" id="239ff136-457e-4a20-80cd-e83aa15ade1b">Covert Operation</card>
     <card qty="5" id="97c00d4e-4ef4-4b89-a39f-7c45a1146d73">Dangerous Rescue</card>
     <card qty="5" id="c341df86-f167-4f6d-8fe6-e475170534f4">Mission Accomplished</card>
@@ -132,15 +124,20 @@
     <card qty="3" id="d81c63f8-c51a-4058-b633-6eb828aa4f97">Frenzied Slashing</card>
     <card qty="5" id="481128d1-848b-4c41-8c54-47459b15e22a">Healing Factor</card>
     <card qty="5" id="f7512cc2-2dad-4699-ae5f-ed322b206d37">Keen Senses</card>
+    <card qty="10" id="42039ea8-ab51-4536-b55f-d2555a04a6eb">Doombot Legion</card>
+    <card qty="10" id="678ad481-6c7f-4784-967c-4366fe480671">Hand Ninjas</card>
+    <card qty="10" id="6ae53f92-f966-4d57-a131-1650b08ab455">Savage Land Mutates</card>
+    <card qty="10" id="02819f50-afa2-4666-93c1-760f1de1241f">Sentinel</card>
+  </section>
+  <section name="Henchmen" shared="True">
+  </section>
+  <section name="Heroes" shared="True">
   </section>
   <section name="Villains" shared="True">
-    
   </section>
   <section name="Schemes" shared="True">
-    
   </section>
-  <section name="MasterMinds" shared="True">
-    
+  <section name="MasterMinds" shared="True"> 
   </section>
   <section name="Main" shared="False" />
   <section name="Main2" shared="False" />

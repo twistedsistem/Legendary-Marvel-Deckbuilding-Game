@@ -1,369 +1,219 @@
 import re
 
+gameScheme = []
+gameMastermind = []
+gameVillainList = []
+gameHeroList = []
+gameHenchmenList = []
+gamePlayers = []
+schemeID = ''
+mastermindID = ''
+stCount = 0
+stNxt2S = 0
+stNxt2MM = 0
+bystanderCount = 0
+
 def setupGame(group = table, x = 0, y = 0, manual = False):
-   #debugNotify(">>> setupGame(){}".format(extraASDebug())) #Debug
+    #function to setup that game to be ready to be played
+    #----------------------TODO----------------------
+    #   - allow for a manual setup of the game
+    #
+    #
+    #------------------------------------------------
+    #Grabing the global variables so that we can write to them inside of the function
     mute()
+    #Setting a deck variable to save repetition
     deck = shared.LoadDeck
-    countAgent = 0
-    countTrooper = 0
-    countPlayer = 0
-    countScheme = 0
-    countBystander = 0
-    schemeNumber = 0
-    countMasterStrike = 0
-    masterMindNumber = 0
-    soloSchemeList = [1,3,4,5,7,8]
-    allSchemeList = [1,2,3,4,5,6,7,8]
-    coreHeroList = [1,2,3,4,5,6,7,8,9,10,11,12,13,14]
-    coreVillainList = [1,2,3,4,5,6,7]
-    coreHenchmenList = [1,2,3,4]
-    coreMasterMindList = [1,2,3,4]
-    gameVillainList = []
-    gameHeroList = []
-    if countPlayer == 0: countPlayer = askInteger("How many players are there?", 1)
-    if schemeNumber == 0: 
-        if countPlayer == 1:
-            schemeIndex = rnd(0,len(soloSchemeList)-1)
-            schemeNumber = soloSchemeList[schemeIndex]
-        else: 
-            schemeIndex = rnd(0,len(allSchemeList)-1)
-            schemeNumber = allSchemeList[schemeIndex]
-    if masterMindNumber == 0:
-        masterMindIndex = rnd(0,len(coreMasterMindList)-1)
-        masterMindNumber = coreMasterMindList[masterMindIndex]
-        #notify("Mastermind Index has been set to {}.".format(masterMindNumber))
-    #debugNotify("Checking Deck", 3)
+    #Checking to make sure that a deck has been loaded and if the setup has already been ran.
     if len(deck) == 0:
         whisper ("Please load a deck first!")
         return
-    # debugNotify("Placing Wounds", 3)
-    globalVariableUpdate(schemeNumber,countPlayer)
-    for card in deck:
+    elif getGlobalVariable('doneSetup') == 'True':
+        whisper ("The game has already been setup.  If you would like to setup again please reset the game and run the setup again.")
+        return
+    adventureBuild('automated')
+    buildDeck(shared.Villains,gameVillainList,'Villain',0)
+    buildDeck(shared.Villains,gameHenchmenList,'Henchman Villain',gameSetupRule[str(len(players))]['henchmen']['cardCount'])
+    buildDeck(group=shared.Villains,checkList=['Scheme Twist'],checkType='Scheme Twist',countMax=gameSetupRule[str(len(players))][gameScheme[0]]['schemeTwist'])
+    buildDeck(group=shared.Villains,checkList=['Bystander'],checkType='Bystander',countMax=(gameSetupRule[str(len(players))]['bystander'] + gameSetupRule[str(len(players))][gameScheme[0]]['bystander']))
+    buildDeck(group=shared.Villains,checkList=['Master Strike'],checkType='Master Strike',countMax=gameSetupRule[str(len(players))]['masterStrike'])
+    buildDeck(shared.MasterMinds,gameMastermind,'Mastermind Tactic',0)
+    buildDeck(shared.Heroes,gameHeroList,'Hero',0)
+    createTableCards()
+    setupPlayers()
+    shuffle(shared.MasterMinds)
+    shuffle(shared.Heroes)
+    if gameScheme[0] == 'Secret Invasion of the Skrull Shapeshifters':
+        for c in shared.Heroes.top(12): c.moveTo(shared.Villains)
+    shuffle(shared.Villains)
+    fillHQ()
+    setGlobalVariable('doneSetup','True')
+    #firstSetup = True
+    notify('The scheme is:  {}'.format(gameScheme))
+    notify('The mastermind is:  {}'.format(gameMastermind))
+    notify('The villains are:  {}'.format(gameVillainList))
+    notify('The heroes are:  {}'.format(gameHeroList))
+    notify('The henchmen are:  {}'.format(gameHenchmenList))
+
+def getPosition(card,x=0,y=0):
+    t = getPlayers()
+    notify("This cards position is {}".format(card.position))
+    notify("The player count is {}.".format(len(t)))
+
+def getOwnerandController(card,x=0,y=0):
+    notify("This cards owner is {} and is controlled by {}".format(card.owner,card.controller))
+    notify("The card name is {}".format(card.Name))
+
+def buildDeck(group,checkList,checkType,countMax):
+    mute()
+    for i in range(len(checkList)):
+        n = 0
+        for card in shared.LoadDeck:
+            if card.CardType == checkType:
+                if card.HeroOrVillianName == checkList[i]:
+                    if countMax > 0:
+                        if n < countMax:
+                            card.moveTo(group)
+                            n = n + 1
+                    else:
+                        card.moveTo(group)
+
+def adventureBuild(sType):
+    global gameScheme,gameMastermind,gameVillainList,gameHeroList,gameHenchmenList
+    pCount = len(players)
+    hcount = gameSetupRule[str(pCount)]['heroes']
+    #setting the scheme for the game.
+    if pCount == 1:
+        gameScheme = rndAddx(soloSchemeList,gameScheme,1)
+        if gameScheme[0] == 'Secret Invasion of the Skrull Shapeshifters':
+            gameMastermind.append('Dr. Doom')
+    else:
+        gameScheme = rndAddx(allSchemeList,gameScheme,1)
+    #setting the mastermind for the game.
+    if len(gameMastermind) < 1:
+        gameMastermind.append(coreMasterMindList[rnd(0,len(coreMasterMindList)-1)])
+    #setting Villain list based on Scheme and Mastermind
+    if gameScheme[0] == 'Secret Invasion of the Skrull Shapeshifters':
+        gameVillainList.append('Skrulls')
+    if gameMastermind[0] == 'Dr. Doom':
+        gameHenchmenList.append('Doombot Legion')
+    elif gameMastermind[0] == 'Loki':
+        gameVillainList.append('Enemies of Asgard')
+    elif gameMastermind[0] == 'Magneto':
+        gameVillainList.append('Brotherhood')
+    elif gameMastermind[0] == 'Red Skull':
+        gameVillainList.append('Hydra')
+    if len(gameVillainList) < gameSetupRule[str(pCount)]['villains']:
+        gameVillainList = rndAddx(coreVillainList,gameVillainList,(gameSetupRule[str(pCount)]['villains'] - len(gameVillainList)))
+    #setting Henchmen Villain based on the number of players
+    if len(gameHenchmenList) < gameSetupRule[str(pCount)]['henchmen']['groupCount']:
+        gameHenchmenList = rndAddx(coreHenchmenList,gameHenchmenList,(gameSetupRule[str(pCount)]['henchmen']['groupCount'] - len(gameHenchmenList)))
+    if gameScheme[0] == 'Negative Zone Prison Breakout':
+        gameHenchmenList = rndAddx(coreHenchmenList,gameHenchmenList,1)
+    #setting Hero list based on number of players
+    gameHeroList = rndAddx(coreHeroList,gameHeroList,gameSetupRule[str(pCount)]['heroes'])
+    if gameScheme[0] == 'Super Hero Civil War':
+        if pCount == 2:
+            gameHeroList.pop()
+            gameHeroList.pop()
+    elif gameScheme[0] == 'Secret Invasion of the Skrull Shapeshifters':
+        gameHeroList = rndAddx(coreHeroList,gameHeroList,1)
+
+def setupPlayers():
+    for p in players:
+        #remoteCall(p,'buildDeck',[me.Deck,['SHIELD Agent'],'Hero',8])
+        #remoteCall(p,'buildDeck',[me.Deck,['SHIELD Trooper'],'Hero',4])
+        buildDeck(group=p.Deck,checkList=['SHIELD Agent'],checkType='Hero',countMax=8)
+        buildDeck(group=p.Deck,checkList=['SHIELD Trooper'],checkType='Hero',countMax=4)
+        remoteCall(p,'shuffle',[p.Deck])
+        notify('{} is Player {}'.format(p.name,players.index(p) + 1))
+        continue
+
+def createTableCards():
+    for card in shared.LoadDeck:
         if card.CardType == 'Wound':
             card.moveToTable(210,-329) #210,-339
             card.orientation = Rot90
             continue
-        elif card.CardType == 'Scheme Twist':
-            if countScheme < int(getGlobalVariable('schemeTwistAmount')):
-                card.moveTo(shared.Villains)
-                countScheme = countScheme + 1
-            continue
         elif card.CardType == 'Bystander':
-            if countBystander < int(getGlobalVariable('bystanderAmount')):
-                card.moveTo(shared.Villains)
-                countBystander = countBystander + 1
-            else:
-                card.moveToTable(445,-310) #445,-310
-            continue
-        elif card.CardType == 'Scheme':
-            if card.SetupNumber == str(schemeNumber):
-                card.moveToTable(-572,-310)
-            continue
-        elif card.CardType == 'Mastermind':
-            if card.SetupNumber == str(masterMindNumber):
-                card.moveToTable(-572,-75)
-                notify("{} set the Mastermind to {}. GOOD LUCK!!".format(me,card.Name))
-            continue
-        elif card.CardType == 'Master Strike':
-            if countPlayer == 1:
-                if countMasterStrike < 1:
-                    card.moveTo(shared.Villains)
-                    countMasterStrike = countMasterStrike + 1
-            else:
-                if countMasterStrike < 5:
-                    card.moveTo(shared.Villains)
-                    countMasterStrike = countMasterStrike + 1
-            continue
-        elif card.CardType == 'Mastermind Tactic':
-            if card.SetupNumber == str(masterMindNumber):
-                card.moveTo(shared.MasterMinds)
+            card.moveToTable(445,-310) #445,-310
             continue
         elif card.Name == 'SHIELD Officer':
             card.moveToTable(-572,164)
             continue
-        elif card.Name == 'SHIELD Agent':
-            if countAgent < 8:
-                for p in players:
-                    card.moveTo(p.Deck)
-                    continue
-                countAgent = countAgent + 1
+        elif card.Name in gameScheme:
+            card.moveToTable(-572,-310)
             continue
-        elif card.Name == 'SHIELD Trooper':
-            if countTrooper < 4:
-                for p in players:
-                    card.moveTo(p.Deck)
-                    continue
-                countTrooper = countTrooper + 1
+        elif card.Name in gameMastermind:
+            card.moveToTable(-572,-75)
             continue
-    for p in players:
-        p.Deck.shuffle()
         continue
-    notify("Scheme Twist count {}.".format(getGlobalVariable('schemeTwistAmount')))
-    notify("Bystander count {}.".format(getGlobalVariable('bystanderAmount')))
-    notify("Henchmen count {}.".format(getGlobalVariable('henchmenAmount')))
-    notify("Villain count {}.".format(getGlobalVariable('villainAmount')))
-    notify("Hero count {}.".format(getGlobalVariable('heroAmount')))
 
-def globalVariableUpdate(gameScheme,playerCount):
-    notify("The Game Scheme going through the function is {} and the player count is set to {}".format(gameScheme,playerCount))
-    if gameScheme == 1:
-        setGlobalVariable('schemeTwistAmount','8')
-        setGlobalVariable('bystanderAmount','12')
-        if playerCount == 1:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','1')
-        elif playerCount == 2:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','2')
-        elif playerCount == 3:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','3')
-        elif playerCount == 4:
-            setGlobalVariable('henchmenAmount','2')
-            setGlobalVariable('villainAmount','3')
-        elif playerCount == 5:
-            setGlobalVarialbe('henchmenAmount','2')
-            setGlobalVariable('villainAmount','4')
-    elif gameScheme == 2:
-        #solo game can't have this scheme so not adding a playerCount 1 if
-        if playerCount == 2:
-            setGlobalVariable('henchmenAmount','2')
-            setGlobalVariable('villainAmount','2')
-            setGlobalVariable('bystanderAmount','2')
-        elif playerCount == 3:
-            setGlobalVariable('henchmenAmount','2')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','8')
-        elif playerCount == 4:
-            setGlobalVariable('henchmenAmount','3')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','8')
-        elif playerCount == 5:
-            setGlobalVarialbe('henchmenAmount','3')
-            setGlobalVariable('villainAmount','4')
-            setGlobalVariable('bystanderAmount','12')
-        setGlobalVariable('schemeTwistAmount','8')
-    elif gameScheme == 3:
-        setGlobalVariable('schemeTwistAmount','7')
-        if playerCount == 1:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','1')
-            setGlobalVariable('bystanderAmount','1')
-        elif playerCount == 2:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','2')
-            setGlobalVariable('bystanderAmount','2')
-        elif playerCount == 3:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','8')
-        elif playerCount == 4:
-            setGlobalVariable('henchmenAmount','2')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','8')
-        elif playerCount == 5:
-            setGlobalVarialbe('henchmenAmount','2')
-            setGlobalVariable('villainAmount','4')
-            setGlobalVariable('bystanderAmount','12')
-    elif gameScheme == 4:
-        setGlobalVariable('schemeTwistAmount','5')
-        if playerCount == 1:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','1')
-            setGlobalVariable('bystanderAmount','18')
-        elif playerCount == 2:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','2')
-            setGlobalVariable('bystanderAmount','18')
-        elif playerCount == 3:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','18')
-        elif playerCount == 4:
-            setGlobalVariable('henchmenAmount','2')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','18')
-        elif playerCount == 5:
-            setGlobalVarialbe('henchmenAmount','2')
-            setGlobalVariable('villainAmount','4')
-            setGlobalVariable('bystanderAmount','18')
-    elif gameScheme == 5:
-        setGlobalVariable('schemeTwistAmount','8')
-        setGlobalVariable('heroAmount','6')
-        if playerCount == 1:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','1')
-            setGlobalVariable('bystanderAmount','1')
-        elif playerCount == 2:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','2')
-            setGlobalVariable('bystanderAmount','2')
-        elif playerCount == 3:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','8')
-        elif playerCount == 4:
-            setGlobalVariable('henchmenAmount','2')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','8')
-        elif playerCount == 5:
-            setGlobalVarialbe('henchmenAmount','2')
-            setGlobalVariable('villainAmount','4')
-            setGlobalVariable('bystanderAmount','12')
-    elif gameScheme == 6:
-        #solo game can't have this scheme so not adding a playerCount 1 if
-        if playerCount == 2:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','2')
-            setGlobalVariable('bystanderAmount','2')
-            setGlobalVariable('schemeTwistAmount','8')
-            setGlobalVariable('heroAmount','4')
-        elif playerCount == 3:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','8')
-            setGlobalVariable('schemeTwistAmount','8')
-        elif playerCount == 4:
-            setGlobalVariable('henchmenAmount','2')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','8')
-            setGlobalVariable('schemeTwistAmount','5')
-        elif playerCount == 5:
-            me.setGlobalVarialbe('henchmenAmount','2')
-            setGlobalVariable('villainAmount','4')
-            setGlobalVariable('bystanderAmount','12')
-            setGlobalVariable('schemeTwistAmount','5')
-    elif gameScheme == 7:
-        setGlobalVariable('schemeTwistAmount','8')
-        if playerCount == 1:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','1')
-            setGlobalVariable('bystanderAmount','1')
-        elif playerCount == 2:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','2')
-            setGlobalVariable('bystanderAmount','2')
-        elif playerCount == 3:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','8')
-        elif playerCount == 4:
-            setGlobalVariable('henchmenAmount','2')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','8')
-        elif playerCount == 5:
-            me.setGlobalVarialbe('henchmenAmount','2')
-            setGlobalVariable('villainAmount','4')
-            setGlobalVariable('bystanderAmount','12')
-    elif gameScheme == 8:
-        setGlobalVariable('schemeTwistAmount','8')
-        if playerCount == 1:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','1')
-            setGlobalVariable('bystanderAmount','1')
-        elif playerCount == 2:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','2')
-            setGlobalVariable('bystanderAmount','2')
-        elif playerCount == 3:
-            setGlobalVariable('henchmenAmount','1')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','8')
-        elif playerCount == 4:
-            setGlobalVariable('henchmenAmount','2')
-            setGlobalVariable('villainAmount','3')
-            setGlobalVariable('bystanderAmount','8')
-        elif playerCount == 5:
-            me.setGlobalVarialbe('henchmenAmount','2')
-            setGlobalVariable('villainAmount','4')
-            setGlobalVariable('bystanderAmount','12')
+def fillHQ():
+    hqArray = eval(getGlobalVariable('hqHeroes'))
+    for i in range(5):
+        if hqArray[i] == 'Empty':
+            shared.Heroes.addViewer(me)
+            mvCard = shared.Heroes[0]
+            hqArray[i] = mvCard.name
+            mvCard.moveToTable(staticPositions['HQ'][str(i+1)]['x'],staticPositions['HQ'][str(i+1)]['y'])
+            shared.Heroes.removeViewer(me)
+    setGlobalVariable('hqHeroes',str(hqArray))
 
-def sitstand(group, x = 0, y = 0):
-    isstanding = me.getGlobalVariable("standing")
-    if isstanding == "1":
-        notify("{} is now sitting.".format(me))
-        setGlobalVariable("standing","0")
-    else:
-        notify("{} is now standing.".format(me))
-        setGlobalVariable("standing","1")
-
-def ssstatus(group, x = 0, y = 0):
-    notify("Getting sit stand")
-    for p in players:
-        gv = p.getGlobalVariable("standing")
-        if gv == "1":
-            notify("{} is standing.".format(p))
+def buyCard(card, x = 0, y = 0):
+    hqArray = eval(getGlobalVariable('hqHeroes'))
+    if card.CardType == 'Hero' or card.CardType == 'Wound':
+        if me.RP < int(card.Cost):
+            notify("{} does not have enough Recruit points to purchase {}.".format(me,card.Name))
         else:
-            notify("{} is sitting.".format(p))
-
-def becomedealer(group,x=0,y=0):
-    notify("{} is now dealer.".format(me))
-    setGlobalVariable("dealer",me._id)
-
-def whosdealer(group,x=0,y=0):
-    ret = getGlobalVariable("dealer")
-    notify("{} dealer num".format(ret))
-    ret = int(ret)
-    notify("{} dealer num".format(ret))
-    for p in players:
-        if p._id == ret:
-            notify("{} is dealer.".format(p))
-            break
-
-def rolldice(group, x = 0, y = 0):
-    mute()
-    n = rnd(1, 6)
-    notify("{} rolls {} on a 6-sided die.".format(me, n))
-
-def flipcoin(group, x = 0, y = 0):
-    mute()
-    n = rnd(1, 2)
-    if n == 1:
-      notify("{} flips heads.".format(me))
+            if card.name in hqArray:
+                hqArray.insert(hqArray.index(card.Name),'Empty')
+                card.moveTo(me.Discard)
+                me.RP = me.RP - int(card.Cost)
+                setGlobalVariable('hqHeroes',str(hqArray))
+                fillHQ()
+            else:
+                card.moveTo(me.Discard)
     else:
-      notify("{} flips tails.".format(me))
-	  
-def listplayers(group, x = 0, y = 0):
-    notify("{}".format(players))
+        notify("You cannot buy this card as it is not a Hero")
 
-def interrupt(group, x = 0, y = 0):
-    notify('{} interrupts the game.'.format(me))
-
-def passturn(group, x = 0, y = 0):
-    notify('{} passes.'.format(me))
-
-def tap(card, x = 0, y = 0):
-  mute()
-  card.orientation ^= Rot90
-  if card.orientation & Rot90 == Rot90:
-    notify('{} turns {} sideways'.format(me, card))
-  else:
-    notify('{} turns {} upright'.format(me, card))
-
-def flip(card, x = 0, y = 0):
+def goToStartTurn(group, x=0,y=0):
     mute()
-    if card.isFaceUp == True:
-      notify("{} flips {} face down.".format(me, card))
-      card.isFaceUp = False
-    else:
-      card.isFaceUp = True
-      notify("{} flips {} face up.".format(me, card))
+    if getGlobalVariable('endofTurn') != 'False' and turnNumber() > 0:
+        whisper("Please have the previous player end their turn first.")
+        return
+    if getGlobalVariable('doneSetup') != 'True':
+        whisper ("Please perform the game setup first (Ctrl+Shift+S)")
+        return
+    if turnNumber() == 0 and players.index(me) == 0:
+        me.setActivePlayer()
+    if not me.isActivePlayer and turnNumber() > 0:
+        if not confirm("You opponent does not seem to have finished their turn properly with F12 yet. Continue?"): return
+        else: me.setActivePlayer()
+    tableCards = (card for card in table if (card.CardType == 'Hero' or card.CardType == 'Wound' or card.CardType == 'Bystander' or card.CardType == 'Villain' or card.CardType == 'Henchmen Villain') and card.controller != me)
+    for card in tableCards: remoteCall(card.controller,'passCardControl',[card,me]) 
+    remoteCall(shared.Villains.controller,'setGroupController',[shared.Villains,me])
+    remoteCall(shared.MasterMinds.controller,'setGroupController',[shared.MasterMinds,me])
+    remoteCall(shared.Heroes.controller,'setGroupController',[shared.Heroes,me])
+    setGlobalVariable('enofTurn','True')
+    setGlobalVariable('activePlayer',str(players.index(me)))
+    whisper ("You have started your turn")
 
-def discard(card, x = 0, y = 0):
-  mute()
-  src = card.group
-  fromText = " from the table" if src == table else " from their " + src.name
-  card.moveTo(shared.Discard)
-  notify("{} discards {}{}.".format(me, card, fromText))
-
-def highlightcard(card, x = 0, y = 0):
-  mute()
-  if card.highlight == "#ff0000":
-    card.highlight = None
-    notify('{} removes highlight from {}'.format(me, card))
-  else:
-    card.highlight = "#ff0000"
-    notify('{} highlights {}'.format(me, card))
+def goToEndTurn(group, x = 0, y = 0):
+    mute()
+    if getGlobalVariable('doneSetup') != 'True':
+      whisper ("Please perform the game setup first (Ctrl+Shift+S)")
+      return
+    if me.RP > 0:
+        if not confirm("You have not spent all your recruit points for this turn, are you sure you want to declare end of turn"): return
+    elif me.AP > 0:
+        if not confirm("You have not spent all your attack points for this turn, are you sure you want to declare end of turn"): return
+    setGlobalVariable('endofTurn','False')
+    myCards = [card for card in table if card.controller == me and card.owner == me] + [card for card in me.hand]
+    for card in myCards:
+        card.moveTo(me.Discard)
+    whisper ("You have ended your turn")
+    passTurn()
 
 def draw(group, x = 0, y = 0):
     if len(shared.LoadDeck) == 0: return
@@ -374,8 +224,8 @@ def draw(group, x = 0, y = 0):
 def drawMany(group, count = None):
     if len(shared.LoadDeck) == 0: return
     mute()
-    if count == None: count = askInteger("Draw how many cards?", 7)
-    for c in shared.LoadDeck.top(count): c.moveTo(me.hand)
+    if count == None: count = askInteger("Draw how many cards?", 6)
+    for c in group.top(count): c.moveTo(me.hand)
     notify("{} draws {} cards.".format(me, count))
 
 def dealMany(group, count=None):
@@ -394,16 +244,11 @@ def dealMany(group, count=None):
                 for c in shared.LoadDeck.top(1): c.moveTo(p.hand)
 
 def dealManyToTable(group, x = 0, y = 0, count=None):
-    dealerid = int(getGlobalVariable("dealer"))
-    if me._id != dealerid:
-        whisper("You are not the dealer player.")
-        return
-    if len(shared.LoadDeck) == 0: return
+    if len(group) == 0: return
     mute()
     if count == None: count = askInteger("Deal how many cards to table?", 5)
-    for c in shared.LoadDeck.top(count): 
-        c.moveTo(table)
-    notify("Dealing {} cards to table.".format(count))
+    for c in group.top(count): 
+        c.moveToTable(x,y)
 
 def dealManyToTableDown(group,x = 0, y = 0, count=None):
     dealerid = int(getGlobalVariable("dealer"))
@@ -426,43 +271,3 @@ def drawManyDown(group, count = None):
         c.moveTo(me.hand)
         c.isFaceUp = False
     notify("{} draws {} cards face down.".format(me, count))
-
-def mill(group, count = None):
-    if len(shared.LoadDeck) == 0: return
-    mute()
-    if count == None: count = askInteger("Mill how many cards?", 1)
-    for c in shared.LoadDeck.top(count): c.moveTo(shared.Discard)
-    notify("{} mills the top {} cards from the Deck.".format(me, count))
-
-def shuffle(group, x = 0, y = 0):
-   mute()
-   shared.LoadDeck.shuffle()
-   if me.isActivePlayer:
-     notify("{} shuffled the deck.".format(me))
-   else:
-     whisper("You are not the active player.")
-def shuffleIntoDeck(group, x = 0, y = 0):
-    mute()
-    for c in group: c.moveTo(shared.LoadDeck)
-    shared.LoadDeck.shuffle()
-    notify("{} shuffled the discard pile into the deck.".format(me))
-
-StandardMarker = ("Marker", "40bba10f-82e5-4f7e-986b-e9c850524f88")
-
-def addanymarker(cards, x = 0, y = 0):
-    mute()
-    marker, quantity = askMarker()
-    if quantity == 0: return
-    for card in cards:
-      card.markers[marker] += quantity
-      notify("{} adds {} {} counters to {}.".format(me, quantity, marker[0], card))
-
-def addmarker(card, x = 0, y = 0):
-    mute()
-    card.markers[StandardMarker] += 1
-    notify("{} adds a marker to {}.".format(me, card))
-
-def removemarker(card, x = 0, y = 0):
-    mute()
-    card.markers[StandardMarker] -= 1
-    notify("{} removes a marker from {}.".format(me, card))

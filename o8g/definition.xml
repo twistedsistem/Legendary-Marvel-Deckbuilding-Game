@@ -1,20 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game name="Legendary - A Marvel Deckbuilding Game" id="ae9f4418-76f5-4df5-97ab-f5ad6dcd7852" octgnVersion="3.1.0.0" version="1.0.0.0" 
     markersize="25" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" tags="cards standard" description="Legendary - A Marvel Deckbuilding Game" setsurl="http://www.octgn.net" 
-  gameurl="http://www.octgn.net" authors="twistedsistem" iconurl="https://raw.github.com/twistedsistem/Legendary-Marvel-Deckbuilding-Game/o8g/images/icon.jpg">
+  gameurl="http://www.octgn.net" authors="twistedsistem" iconurl="https://raw.github.com/twistedsistem/Legendary-Marvel-Deckbuilding-Game/o8g/images/icon.jpg" usetwosidedtable="False">
     <scripts>
       <script src="scripts/actions.py" />
+      <script src="scripts/constants.py" />
+      <script src="scripts/generic.py" />
     </scripts>
     <proxygen definitionsrc="proxy/proxydef.xml">
     </proxygen>
     <globalvariables>
-        <globalvariable name="villainAmount" value="0"/>
-        <globalvariable name="heroAmount" value="5"/>
-        <globalvariable name="henchmenAmount" value="0"/>
-        <globalvariable name="bystanderAmount" value="0"/>
-        <globalvariable name="masterStrikeAmount" value="0"/>
-        <globalvariable name="schemeTwistAmount" value="0"/>
-        <globalvariable name="mustLeadVillain" value="0"/>
+        <globalvariable name="activePlayer" value="0"/>
+        <globalvariable name="doneSetup" value="False"/>
+        <globalvariable name="endofTurn" value="False"/>
+        <globalvariable name="hqHeroes" value="['Empty','Empty','Empty','Empty','Empty']"/>
     </globalvariables>
     <card back="cards/back.png" front="cards/front.png" width="126" height="176" cornerRadius="2">
       <property name="Name"  type="String"/>
@@ -32,112 +31,60 @@
       <property name="SuperAbility"  type="String"/>
       <property name="VillainAbility"  type="String"/>
       <property name="Card Text"  type="String"/>
+      <property name="MustLeadVillain" type="String"/>
+      <property name="MustLeadHenchmen" type="String"/>
       <property name="ActionScript"  type="String"/>
       <property name="AutoScript"  type="String"/>
     </card>
     <table name="Table" visibility="undefined" ordered="False" width="1300" height="808" background="background/background.jpg" board="background/Tabletop.jpg" boardPosition="-650,-370,1300,808" backgroundStyle="uniformToFill">
         <groupaction menu="Setup Game" shortcut="ctrl+shift+s" default="False" execute="setupGame" />
-        <groupaction menu="Draw" shortcut="ctrl+D" default="True" execute="draw" />
-        <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
-        <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
-        <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
-        <groupaction menu="Roll a 6-sided Die" shortcut="ctrl+r" execute="rolldice" />
-        <groupaction menu="Flip a Coin" shortcut="ctrl+shift+r" execute="flipcoin" />
-        <groupaction menu="Interrupt Game" shortcut="enter" execute="interrupt" />
-        <groupaction menu="Pass" shortcut="tab" execute="passturn" />
-        <groupaction menu="Sit/Stand" shortcut="alt+s" execute="sitstand" />
-        <groupaction menu="SSStatus" shortcut="ctrl+alt+s"  execute="ssstatus" />
-        <groupaction menu="Become Dealer" shortcut="ctrl+B" execute="becomedealer" />
-        <groupaction menu="Who's Dealer?" execute="whosdealer" />
-        <cardaction menu="Turn card Sideways" default="True" execute="tap" />
-        <cardaction menu="Flip Card" shortcut="ctrl+f" execute="flip" />
-        <cardaction menu="Discard Card" shortcut="del" execute="discard" />
-        <cardaction menu="Add/Remove Red Highlight" shortcut="ctrl+A" execute="highlightcard" />
-        <cardaction menu="Add Marker" shortcut="ctrl+Q" execute="addmarker" />
-        <cardaction menu="Remove Marker" shortcut="ctrl+W" execute="removemarker" />
-        <cardaction menu="Add Custom Marker..." shortcut="ctrl+shift+Q" batchExecute="addanymarker" />
+        <groupaction menu="Start Turn" shortcut="F1" default="False" execute="goToStartTurn" />
+        <groupaction menu="End Turn" shortcut="F12" default="False" execute="goToEndTurn" />
+        <cardaction menu="Buy Card" default="True" execute="buyCard"/>
+        <cardaction menu="Get Position" execute="getPosition"/>
+        <cardaction menu="Get Owner/Contoller Info" execute="getOwnerandController"/>
     </table>
-   <player summary="Hand:{#Hand} Score:{#Score}">
+   <player summary="Hand:{#Hand} RP:{#RP} AP:{#AP} VP:{#VP} WS:{#WS}">
     <globalvariable name="standing" value="1" />
-    <counter name="Score" icon="counters/score.png" />
+    <counter name="RP" icon="counters/score.png" />
+    <counter name="AP" icon="counters/score.png" />
+    <counter name="VP" icon="counters/score.png" />
+    <counter name="WS" icon="counters/score.png" />
     <hand name="Hand" shortcut="ctrl+H" visibility="me" ordered="False" width="63" height="88" icon="groups/hand.png">
        <cardaction menu="Discard Card" shortcut="del" execute="discard" />
     </hand>
-    <group name="Discard" shortcut="ctrl+H" visibility="me" ordered="False" width="63" height="88" icon="groups/discardpile.png">
-       <cardaction menu="Discard Card" shortcut="del" execute="discard" />
+    <group name="Discard" shortcut="ctrl+H" visibility="all" ordered="False" width="63" height="88" icon="groups/discardpile.png">
+       <groupaction menu="Shuffle into Deck" default="True" execute="shuffleIntoDeck" />
     </group>
     <group name="Deck" shortcut="ctrl+H" visibility="none" ordered="False" width="63" height="88" icon="groups/deck.png">
+       <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
        <cardaction menu="Discard Card" shortcut="del" execute="discard" />
+    </group>
+    <group name="Victory Points" visibility="all" ordered="False" width="63" height="88" icon="groups/deck.png">
     </group>
   </player>
   <shared>
-    <group name="Heros" visibility="all" width="63" height="88" icon="groups/deck.png" collapsed="True">
+    <group name="Heroes" visibility="none" width="63" height="88" icon="groups/deck.png" collapsed="False">
       <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
-      <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
-      <groupaction menu="Deal X Cards To Table(face down)" execute="dealManyToTableDown" />
-      <groupaction menu="Draw" shortcut="ctrl+D" execute="draw" />
-      <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
-      <groupaction menu="Draw X Cards Face Down" execute="drawManyDown" />
-      <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
     </group>
-    <group name="Villains" visibility="all" width="63" height="88" icon="groups/deck.png" collapsed="False">
+    <group name="Villains" visibility="none" width="63" height="88" icon="groups/deck.png" collapsed="False">
       <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
       <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
-      <groupaction menu="Deal X Cards To Table(face down)" execute="dealManyToTableDown" />
-      <groupaction menu="Draw" shortcut="ctrl+D" execute="draw" />
-      <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
-      <groupaction menu="Draw X Cards Face Down" execute="drawManyDown" />
-      <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
     </group>
-    <group name="Schemes" visibility="all" width="63" height="88" icon="groups/deck.png" collapsed="True">
+    <group name="MasterMinds" visibility="none" width="63" height="88" icon="groups/deck.png" collapsed="False">
       <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
-      <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
-      <groupaction menu="Deal X Cards To Table(face down)" execute="dealManyToTableDown" />
-      <groupaction menu="Draw" shortcut="ctrl+D" execute="draw" />
-      <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
-      <groupaction menu="Draw X Cards Face Down" execute="drawManyDown" />
-      <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
     </group>
-    <group name="MasterMinds" visibility="all" width="63" height="88" icon="groups/deck.png" collapsed="True">
-      <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
-      <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
-      <groupaction menu="Deal X Cards To Table(face down)" execute="dealManyToTableDown" />
-      <groupaction menu="Draw" shortcut="ctrl+D" execute="draw" />
-      <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
-      <groupaction menu="Draw X Cards Face Down" execute="drawManyDown" />
-      <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
-      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
-    </group>
-    <group name="Henchmen" visibility="all" width="63" height="88" icon="groups/deck.png" collapsed="True">
-      <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
-      <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
-      <groupaction menu="Deal X Cards To Table(face down)" execute="dealManyToTableDown" />
-      <groupaction menu="Draw" shortcut="ctrl+D" execute="draw" />
-      <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
-      <groupaction menu="Draw X Cards Face Down" execute="drawManyDown" />
-      <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
-      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
-    </group>
-    <group name="LoadDeck" visibility="all" width="63" height="88" icon="groups/discardpile.png" collapsed="False">
-      <groupaction menu="Deal X Cards" default="True" execute="setupGame" />
-      <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
-      <groupaction menu="Deal X Cards To Table(face down)" execute="dealManyToTableDown" />
-      <groupaction menu="Draw" shortcut="ctrl+D" execute="draw" />
-      <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
-      <groupaction menu="Draw X Cards Face Down" execute="drawManyDown" />
-      <groupaction menu="Send Top X Cards to the Discard Pile" execute="mill" />
-      <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
+    <group name="LoadDeck" visibility="all" width="63" height="88" icon="groups/discardpile.png" collapsed="True">
+      <groupaction menu="Setup Game" shortcut="ctrl+shift+s" default="False" execute="setupGame" />
     </group>
   </shared>
   <sharedDeck>
-      <section name="Heros" group="Heros" />
+      <section name="Heroes" group="Heroes" />
       <section name="Villains" group="Villains" />
-      <section name="Schemes" group="Schemes" />
       <section name="MasterMinds" group="MasterMinds" />
-      <section name="Henchmen" group="Henchmen" />
       <section name="LoadDeck" group="LoadDeck" />
   </sharedDeck>
 </game>
