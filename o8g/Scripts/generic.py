@@ -16,14 +16,16 @@ def setGroupController(group,player):
    if group.controller != player: group.setController(player)
 
 def passTurn():
-   mute()
-   update()
-   if int(getGlobalVariable('activePlayer')) == len(players):
-      nextPlayer = 1
-   else:
-      nextPlayer = int(getGlobalVariable('activePlayer'))
-   index = nextPlayer - 1
-   players[index].setActivePlayer()
+  mute()
+  update()
+  pList = eval(getGlobalVariable('playerList'))
+  if pList.index(me.name) == (len(pList) - 1):
+    nextPlayer = pList[0]
+  else:
+    nextPlayer = pList[pList.index(me.name) + 1]
+  for p in players:
+    if p.name == nextPlayer:
+      players[players.index(p)].setActivePlayer()
 
 def rndAddx(pList,fList,rangeNumber):
    for i in range(rangeNumber):
@@ -35,6 +37,15 @@ def rndAddx(pList,fList,rangeNumber):
             added = True
    return fList
 
+def updatePlayerList():
+  mute()
+  update()
+  pList = eval(getGlobalVariable('playerList'))
+  for p in players:
+    if p.name not in pList:
+      pList.append(p.name)
+  setGlobalVariable('playerList',str(pList))  
+
 def shuffle(group): 
    group.shuffle()
      
@@ -43,3 +54,16 @@ def shuffleIntoDeck(group, x = 0, y = 0):
     for c in group: c.moveTo(me.Deck)
     me.Deck.shuffle()
     notify("{} shuffled the discard pile into the deck.".format(me))
+
+def listOfDupIndex(seq,item):
+  start_at = -1
+  locs = []
+  while True:
+    try:
+      loc = seq.index(item,start_at+1)
+    except ValueError:
+      break
+    else:
+      locs.append(loc)
+      start_at = loc
+  return locs

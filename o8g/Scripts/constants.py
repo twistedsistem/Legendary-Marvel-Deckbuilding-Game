@@ -14,11 +14,11 @@ staticPositions = { # A dictionary which holds the static coordinates for specif
 			'5':{'x':-376,'y':164}
 		},
 	'CS':{# CityScape positions
-			'sewers':{'x':256,'y':-76},
-			'bank':{'x':98,'y':-76},
-			'rooftops':{'x':-60,'y':-76},
-			'streets':{'x':-218,'y':-76},
-			'bridge':{'x':-376,'y':-76}
+			'1':{'x':256,'y':-76},
+			'2':{'x':98,'y':-76},
+			'3':{'x':-60,'y':-76},
+			'4':{'x':-218,'y':-76},
+			'5':{'x':-376,'y':-76}
 		}
 	}
 

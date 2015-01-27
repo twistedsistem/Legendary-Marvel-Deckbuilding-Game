@@ -1,12 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <game name="Legendary - A Marvel Deckbuilding Game" id="ae9f4418-76f5-4df5-97ab-f5ad6dcd7852" octgnVersion="3.1.0.0" version="1.0.0.0" 
     markersize="25" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" tags="cards standard" description="Legendary - A Marvel Deckbuilding Game" setsurl="http://www.octgn.net" 
-  gameurl="http://www.octgn.net" authors="twistedsistem" iconurl="https://raw.github.com/twistedsistem/Legendary-Marvel-Deckbuilding-Game/o8g/images/icon.jpg" usetwosidedtable="False">
+  gameurl="http://www.octgn.net" authors="twistedsistem" iconurl="https://raw.githubusercontent.com/twistedsistem/Legendary-Marvel-Deckbuilding-Game/master/o8g/images/icon.jpg" usetwosidedtable="False">
     <scripts>
       <script src="scripts/actions.py" />
       <script src="scripts/constants.py" />
       <script src="scripts/generic.py" />
     </scripts>
+    <events>
+      <event name="OnGameStart" action="updatePlayerList"/>
+    </events>
     <proxygen definitionsrc="proxy/proxydef.xml">
     </proxygen>
     <globalvariables>
@@ -14,6 +17,8 @@
         <globalvariable name="doneSetup" value="False"/>
         <globalvariable name="endofTurn" value="False"/>
         <globalvariable name="hqHeroes" value="['Empty','Empty','Empty','Empty','Empty']"/>
+        <globalvariable name="csVillains" value="['Empty','Empty','Empty','Empty','Empty']"/>
+        <globalvariable name="playerList" value="[]"/>
     </globalvariables>
     <card back="cards/back.png" front="cards/front.png" width="126" height="176" cornerRadius="2">
       <property name="Name"  type="String"/>
@@ -40,14 +45,14 @@
         <groupaction menu="Setup Game" shortcut="ctrl+shift+s" default="False" execute="setupGame" />
         <groupaction menu="Start Turn" shortcut="F1" default="False" execute="goToStartTurn" />
         <groupaction menu="End Turn" shortcut="F12" default="False" execute="goToEndTurn" />
-        <cardaction menu="Buy Card" default="True" execute="buyCard"/>
+        <cardaction menu="Buy/Fight/Gain Card" default="True" execute="triggerCard"/>
         <cardaction menu="Get Position" execute="getPosition"/>
         <cardaction menu="Get Owner/Contoller Info" execute="getOwnerandController"/>
     </table>
    <player summary="Hand:{#Hand} RP:{#RP} AP:{#AP} VP:{#VP} WS:{#WS}">
     <globalvariable name="standing" value="1" />
     <counter name="RP" icon="counters/score.png" />
-    <counter name="AP" icon="counters/score.png" />
+    <counter name="AP" icon="counters/AP.jpg" />
     <counter name="VP" icon="counters/score.png" />
     <counter name="WS" icon="counters/score.png" />
     <hand name="Hand" shortcut="ctrl+H" visibility="me" ordered="False" width="63" height="88" icon="groups/hand.png">
@@ -69,7 +74,7 @@
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
     </group>
     <group name="Villains" visibility="none" width="63" height="88" icon="groups/deck.png" collapsed="False">
-      <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
+      <groupaction menu="Fill Villains" default="True" execute="fillVillain" />
       <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
     </group>

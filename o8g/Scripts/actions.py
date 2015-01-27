@@ -6,12 +6,6 @@ gameVillainList = []
 gameHeroList = []
 gameHenchmenList = []
 gamePlayers = []
-schemeID = ''
-mastermindID = ''
-stCount = 0
-stNxt2S = 0
-stNxt2MM = 0
-bystanderCount = 0
 
 def setupGame(group = table, x = 0, y = 0, manual = False):
     #function to setup that game to be ready to be played
@@ -49,11 +43,11 @@ def setupGame(group = table, x = 0, y = 0, manual = False):
     fillHQ()
     setGlobalVariable('doneSetup','True')
     #firstSetup = True
-    notify('The scheme is:  {}'.format(gameScheme))
-    notify('The mastermind is:  {}'.format(gameMastermind))
-    notify('The villains are:  {}'.format(gameVillainList))
-    notify('The heroes are:  {}'.format(gameHeroList))
-    notify('The henchmen are:  {}'.format(gameHenchmenList))
+    # notify('The scheme is:  {}'.format(gameScheme))
+    # notify('The mastermind is:  {}'.format(gameMastermind))
+    # notify('The villains are:  {}'.format(gameVillainList))
+    # notify('The heroes are:  {}'.format(gameHeroList))
+    # notify('The henchmen are:  {}'.format(gameHenchmenList))
 
 def getPosition(card,x=0,y=0):
     t = getPlayers()
@@ -121,31 +115,33 @@ def adventureBuild(sType):
 
 def setupPlayers():
     for p in players:
-        #remoteCall(p,'buildDeck',[me.Deck,['SHIELD Agent'],'Hero',8])
-        #remoteCall(p,'buildDeck',[me.Deck,['SHIELD Trooper'],'Hero',4])
         buildDeck(group=p.Deck,checkList=['SHIELD Agent'],checkType='Hero',countMax=8)
         buildDeck(group=p.Deck,checkList=['SHIELD Trooper'],checkType='Hero',countMax=4)
         remoteCall(p,'shuffle',[p.Deck])
-        notify('{} is Player {}'.format(p.name,players.index(p) + 1))
-        continue
+        remoteCall(p,'drawMany',[p.Deck,6])
 
 def createTableCards():
     for card in shared.LoadDeck:
         if card.CardType == 'Wound':
             card.moveToTable(210,-329) #210,-339
             card.orientation = Rot90
+            card.anchor = True
             continue
         elif card.CardType == 'Bystander':
             card.moveToTable(445,-310) #445,-310
+            card.anchor = True
             continue
         elif card.Name == 'SHIELD Officer':
             card.moveToTable(-572,164)
+            card.anchor = True
             continue
         elif card.Name in gameScheme:
             card.moveToTable(-572,-310)
+            card.anchor = True
             continue
         elif card.Name in gameMastermind:
             card.moveToTable(-572,-75)
+            card.anchor = True
             continue
         continue
 
@@ -157,15 +153,18 @@ def fillHQ():
             mvCard = shared.Heroes[0]
             hqArray[i] = mvCard.name
             mvCard.moveToTable(staticPositions['HQ'][str(i+1)]['x'],staticPositions['HQ'][str(i+1)]['y'])
+            mvCard.anchor = True
             shared.Heroes.removeViewer(me)
     setGlobalVariable('hqHeroes',str(hqArray))
 
-def buyCard(card, x = 0, y = 0):
+def triggerCard(card, x = 0, y = 0):
+    mute()
     hqArray = eval(getGlobalVariable('hqHeroes'))
     if card.CardType == 'Hero' or card.CardType == 'Wound':
         if me.RP < int(card.Cost):
             notify("{} does not have enough Recruit points to purchase {}.".format(me,card.Name))
         else:
+            card.anchor = False
             if card.name in hqArray:
                 hqArray.insert(hqArray.index(card.Name),'Empty')
                 card.moveTo(me.Discard)
@@ -174,6 +173,7 @@ def buyCard(card, x = 0, y = 0):
                 fillHQ()
             else:
                 card.moveTo(me.Discard)
+            notify("{} has just recruited {} to help defeat {}.".format(me.name,card.Name,gameMastermind[0]))
     else:
         notify("You cannot buy this card as it is not a Hero")
 
@@ -195,9 +195,9 @@ def goToStartTurn(group, x=0,y=0):
     remoteCall(shared.Villains.controller,'setGroupController',[shared.Villains,me])
     remoteCall(shared.MasterMinds.controller,'setGroupController',[shared.MasterMinds,me])
     remoteCall(shared.Heroes.controller,'setGroupController',[shared.Heroes,me])
+    villainDraw()
     setGlobalVariable('enofTurn','True')
     setGlobalVariable('activePlayer',str(players.index(me)))
-    whisper ("You have started your turn")
 
 def goToEndTurn(group, x = 0, y = 0):
     mute()
@@ -209,11 +209,58 @@ def goToEndTurn(group, x = 0, y = 0):
     elif me.AP > 0:
         if not confirm("You have not spent all your attack points for this turn, are you sure you want to declare end of turn"): return
     setGlobalVariable('endofTurn','False')
-    myCards = [card for card in table if card.controller == me and card.owner == me] + [card for card in me.hand]
+    myCards = [card for card in table if card.controller == me and card.anchor == False and card.CardType == 'Hero'] + [card for card in me.hand]
     for card in myCards:
         card.moveTo(me.Discard)
-    whisper ("You have ended your turn")
+    drawMany(me.Deck,6)
+    if len(me.hand) < 6:
+        shuffleIntoDeck(me.Discard)
+        drawMany(me.Deck,(6-len(me.hand)))
     passTurn()
+
+def villainDraw():
+    mute()
+    csArray = eval(getGlobalVariable('csVillains'))
+    myCards = [card for card in table if (card.CardType == 'Villain' or card.CardType == 'Henchman Villain' or card.CardType == 'Hero') and (card.position[0] in range(-376,257) and card.position[1] == -76)]
+    try:
+        k = csArray.index('Empty')
+    except ValueError:
+        k = 5
+    for c in shared.Villains.top(1):
+        if c.CardType == 'Villain' or c.CardType == 'Henchman Villain' or c.CardType == 'Hero':
+            if k > 0:
+                csArray = shiftCityScape(k)
+            c.moveToTable(staticPositions['CS']['1']['x'],staticPositions['CS']['1']['y'])
+            c.anchor = True
+            csArray[0] = c.name
+        if c.CardType == 'Bystander' or c.CardType == 'Scheme Twist' or c.CardType == 'Master Strike':
+            c.moveToTable(445,-76)
+    setGlobalVariable('csVillains',str(csArray))
+
+def shiftCityScape(eIndex):
+    mute()
+    csArray = eval(getGlobalVariable('csVillains'))
+    myCards = [card for card in table if (card.CardType == 'Villain' or card.CardType == 'Henchman Villain' or card.CardType == 'Hero') and (card.position[0] in range(-376,257) and card.position[1] == -76)]
+    if eIndex == 5:
+        for c in myCards:
+            if c.name == csArray[4]:
+                c.moveToTable(-389,-329)
+                c.orientation = Rot90
+                myCards.pop(myCards.index(c))
+                csArray[4] = 'Empty'
+                eIndex = 4
+    if eIndex < 5:
+        for i, j in reversed(list(enumerate(csArray))):
+            if i < eIndex:
+                csArray[i+1] = csArray[i]
+                if i == 0:
+                    csArray[0] = 'Empty'
+            for c in myCards:
+                if c.name == j:
+                    c.moveToTable(staticPositions['CS'][str(i+2)]['x'],staticPositions['CS'][str(i+2)]['y'])
+                    myCards.pop(myCards.index(c))
+                    break
+    return csArray
 
 def draw(group, x = 0, y = 0):
     if len(shared.LoadDeck) == 0: return
