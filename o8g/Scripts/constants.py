@@ -2,8 +2,13 @@ coreHeroList = ['Black Widow','Captain America','Cyclops','Deadpool','Emma Frost
 coreVillainList = ['Brotherhood','Enemies of Asgard','Hydra','Masters of Evil','Radiation','Skrulls','Spider Foes']
 coreHenchmenList = ['Doombot Legion','Hand Ninjas','Savage Land Mutants','Sentinel']
 coreMasterMindList = ['Dr. Doom','Loki','Magneto','Red Skull']
-soloSchemeList = ['Midtown Bank Robbery','Portals to the Dark Dimension',"Replace Earth's Leaders with Killbots",'Secret Invasion of the Skrull Shapeshifters','The Legacy Virus','Unleash the Power of the Cosmic Cube']
-allSchemeList  = ['Midtown Bank Robbery','Negative Zone Prison Breakout','Portals to the Dark Dimension',"Replace Earth's Leaders with Killbots",'Secret Invasion of the Skrull Shapeshifters','Super Hero Civil War','The Legacy Virus','Unleash the Power of the Cosmic Cube']
+soloSchemeList = ['Midtown Bank Robbery','Portals to the Dark Dimension',"Replace Earth's Leaders with Killbots",'Secret Invasion of the Skrull Shapeshifters','The Legacy Virus','Unleash The Power of the Cosmic Cube']
+allSchemeList  = ['Midtown Bank Robbery','Negative Zone Prison Breakout','Portals to the Dark Dimension',"Replace Earth's Leaders with Killbots",'Secret Invasion of the Skrull Shapeshifters','Super Hero Civil War','The Legacy Virus','Unleash The Power of the Cosmic Cube']
+
+gameMarkers = {
+	'Bystander Marker': ("Captured Bystander","00000000-0000-0000-0000-000000000004"),
+	'Scheme Twist Marker': ("Scheme Twist","00000000-0000-0000-0000-000000000002")
+}
 
 staticPositions = { # A dictionary which holds the static coordinates for specific table placement.
 	'HQ':{# Hero HQ positions with 1 being the right most hero
@@ -36,7 +41,7 @@ gameSetupRule = { # A dictionary which holds how many different heroes, villains
 			'Secret Invasion of the Skrull Shapeshifters':{'schemeTwist':8,'bystander':0},
 			'Super Hero Civil War':{'schemeTwist':0,'bystander':0},
 			'The Legacy Virus':{'schemeTwist':8,'bystander':0},
-			'Unleash the Power of the Cosmic Cube':{'schemeTwist':8,'bystander':0}
+			'Unleash The Power of the Cosmic Cube':{'schemeTwist':8,'bystander':0}
 		},
 	'2':{
 			'heroes':5,
@@ -51,7 +56,7 @@ gameSetupRule = { # A dictionary which holds how many different heroes, villains
 			'Secret Invasion of the Skrull Shapeshifters':{'schemeTwist':8,'bystander':0},
 			'Super Hero Civil War':{'schemeTwist':8,'bystander':0},
 			'The Legacy Virus':{'schemeTwist':8,'bystander':0},
-			'Unleash the Power of the Cosmic Cube':{'schemeTwist':8,'bystander':0}
+			'Unleash The Power of the Cosmic Cube':{'schemeTwist':8,'bystander':0}
 		},
 	'3':{
 			'heroes':5,
@@ -66,7 +71,7 @@ gameSetupRule = { # A dictionary which holds how many different heroes, villains
 			'Secret Invasion of the Skrull Shapeshifters':{'schemeTwist':8,'bystander':0},
 			'Super Hero Civil War':{'schemeTwist':8,'bystander':0},
 			'The Legacy Virus':{'schemeTwist':8,'bystander':0},
-			'Unleash the Power of the Cosmic Cube':{'schemeTwist':8,'bystander':0}
+			'Unleash The Power of the Cosmic Cube':{'schemeTwist':8,'bystander':0}
 		},
 	'4':{
 			'heroes':5,
@@ -81,7 +86,7 @@ gameSetupRule = { # A dictionary which holds how many different heroes, villains
 			'Secret Invasion of the Skrull Shapeshifters':{'schemeTwist':8,'bystander':0},
 			'Super Hero Civil War':{'schemeTwist':5,'bystander':0},
 			'The Legacy Virus':{'schemeTwist':8,'bystander':0},
-			'Unleash the Power of the Cosmic Cube':{'schemeTwist':8,'bystander':0}
+			'Unleash The Power of the Cosmic Cube':{'schemeTwist':8,'bystander':0}
 		},
 	'5':{
 			'heroes':6,
@@ -96,6 +101,6 @@ gameSetupRule = { # A dictionary which holds how many different heroes, villains
 			'Secret Invasion of the Skrull Shapeshifters':{'schemeTwist':8,'bystander':0},
 			'Super Hero Civil War':{'schemeTwist':5,'bystander':0},
 			'The Legacy Virus':{'schemeTwist':8,'bystander':0},
-			'Unleash the Power of the Cosmic Cube':{'schemeTwist':8,'bystander':0}
+			'Unleash The Power of the Cosmic Cube':{'schemeTwist':8,'bystander':0}
 		}
 }

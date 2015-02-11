@@ -16,8 +16,8 @@
         <globalvariable name="activePlayer" value="0"/>
         <globalvariable name="doneSetup" value="False"/>
         <globalvariable name="endofTurn" value="False"/>
-        <globalvariable name="hqHeroes" value="['Empty','Empty','Empty','Empty','Empty']"/>
-        <globalvariable name="csVillains" value="['Empty','Empty','Empty','Empty','Empty']"/>
+        <globalvariable name="hqHeroes" value="[None,None,None,None,None]"/>
+        <globalvariable name="csVillains" value="[None,None,None,None,None]"/>
         <globalvariable name="playerList" value="[]"/>
     </globalvariables>
     <card back="cards/back.png" front="cards/front.png" width="126" height="176" cornerRadius="2">
@@ -35,7 +35,7 @@
       <property name="SuperAbilityTrigger"  type="String"/>
       <property name="SuperAbility"  type="String"/>
       <property name="VillainAbility"  type="String"/>
-      <property name="Card Text"  type="String"/>
+      <property name="Text"  type="String"/>
       <property name="MustLeadVillain" type="String"/>
       <property name="MustLeadHenchmen" type="String"/>
       <property name="ActionScript"  type="String"/>
@@ -45,45 +45,49 @@
         <groupaction menu="Setup Game" shortcut="ctrl+shift+s" default="False" execute="setupGame" />
         <groupaction menu="Start Turn" shortcut="F1" default="False" execute="goToStartTurn" />
         <groupaction menu="End Turn" shortcut="F12" default="False" execute="goToEndTurn" />
+        <cardaction menu="Send to Sewers" default="False" execute="sendToCS" />
         <cardaction menu="Buy/Fight/Gain Card" default="True" execute="triggerCard"/>
+        <cardaction menu="KO card" default="False" execute="koCard"/>
         <cardaction menu="Get Position" execute="getPosition"/>
         <cardaction menu="Get Owner/Contoller Info" execute="getOwnerandController"/>
     </table>
    <player summary="Hand:{#Hand} RP:{#RP} AP:{#AP} VP:{#VP} WS:{#WS}">
     <globalvariable name="standing" value="1" />
-    <counter name="RP" icon="counters/score.png" />
-    <counter name="AP" icon="counters/AP.jpg" />
-    <counter name="VP" icon="counters/score.png" />
+    <counter name="RP" icon="counters/RP.png" />
+    <counter name="AP" icon="counters/AP.png" />
+    <counter name="VP" icon="counters/VP.png" />
     <counter name="WS" icon="counters/score.png" />
     <hand name="Hand" shortcut="ctrl+H" visibility="me" ordered="False" width="63" height="88" icon="groups/hand.png">
        <cardaction menu="Discard Card" shortcut="del" execute="discard" />
+       <cardaction menu="KO card" default="False" execute="koCard"/>
     </hand>
     <group name="Discard" shortcut="ctrl+H" visibility="all" ordered="False" width="63" height="88" icon="groups/discardpile.png">
        <groupaction menu="Shuffle into Deck" default="True" execute="shuffleIntoDeck" />
+       <cardaction menu="KO card" default="False" execute="koCard"/>
     </group>
     <group name="Deck" shortcut="ctrl+H" visibility="none" ordered="False" width="63" height="88" icon="groups/deck.png">
        <groupaction menu="Draw X Cards" shortcut="ctrl+shift+D" execute="drawMany" />
+       <cardaction menu="KO card" default="False" execute="koCard"/>
        <cardaction menu="Discard Card" shortcut="del" execute="discard" />
     </group>
-    <group name="Victory Points" visibility="all" ordered="False" width="63" height="88" icon="groups/deck.png">
+    <group name="Victory Points" visibility="all" ordered="False" width="63" height="88" icon="groups/VP.png">
     </group>
   </player>
   <shared>
     <group name="Heroes" visibility="none" width="63" height="88" icon="groups/deck.png" collapsed="False">
-      <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
     </group>
     <group name="Villains" visibility="none" width="63" height="88" icon="groups/deck.png" collapsed="False">
       <groupaction menu="Fill Villains" default="True" execute="fillVillain" />
-      <groupaction menu="Deal X Cards To Table" execute="dealManyToTable" />
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
     </group>
     <group name="MasterMinds" visibility="none" width="63" height="88" icon="groups/deck.png" collapsed="False">
-      <groupaction menu="Deal X Cards" default="True" execute="dealMany" />
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
     </group>
     <group name="LoadDeck" visibility="all" width="63" height="88" icon="groups/discardpile.png" collapsed="True">
       <groupaction menu="Setup Game" shortcut="ctrl+shift+s" default="False" execute="setupGame" />
+    </group>
+    <group name="KO" visibility="all" width="63" height="88" icon="groups/discardpile.png" collapsed="True">
     </group>
   </shared>
   <sharedDeck>
@@ -91,5 +95,6 @@
       <section name="Villains" group="Villains" />
       <section name="MasterMinds" group="MasterMinds" />
       <section name="LoadDeck" group="LoadDeck" />
+      <section name="KO" group="KO" />
   </sharedDeck>
 </game>

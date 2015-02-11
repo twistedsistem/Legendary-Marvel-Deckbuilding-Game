@@ -10,14 +10,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Covert"/>
 		<property name="Cost" value="7"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="3+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="3"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Avengers"/>
 		<property name="SuperAbility" value="You get +3 Attack for each other Avengers Hero you played this turn"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="You get +3 Attack for each other Avenger Hero you played this turn."/>
+		<property name="Text" value="You get +3 Attack for each other Avenger Hero you played this turn."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -29,14 +29,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="5"/>
 		<property name="Victory" value="3"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight"/>
-		<property name="Card Text" value="Fight: If you fight Abomination on the Streets or Bridge, rescue three Bystanders."/>
+		<property name="Text" value="Fight: If you fight Abomination on the Streets or Bridge, rescue three Bystanders."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -48,14 +48,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Tech"/>
 		<property name="Cost" value="5"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="3+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="3"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Tech"/>
 		<property name="SuperAbility" value="You get +1 Attack for each other Tech Hero you have played this turn."/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Tech: You get +1 Attack for for each other Tech Hero you played this turn."/>
+		<property name="Text" value="Tech: You get +1 Attack for for each other Tech Hero you played this turn."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -68,13 +68,13 @@
 		<property name="Type" value="Strength"/>
 		<property name="Cost" value="2"/>
 		<property name="Recruit" value="1"/>
-		<property name="Attack" value=""/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Reveal the top card of your deck. If that card costs 2 or less, draw it."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Reveal the top card of your deck. If that card costs 2 Cost or less, draw it."/>
+		<property name="Text" value="Reveal the top card of your deck. If that card costs 2 Cost or less, draw it."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -86,14 +86,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Instinct"/>
 		<property name="Cost" value="3"/>
-		<property name="Recruit" value="0+"/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="You get +1 Recruit for each color of Hero you have"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="You get +1 Recruit for each color of Hero you have."/>
+		<property name="Text" value="You get +1 Recruit for each color of Hero you have."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -105,14 +105,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="6"/>
 		<property name="Victory" value="4"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight"/>
-		<property name="Card Text" value="Fight: For each of your Avengers Heroes, rescue a Bystander."/>
+		<property name="Text" value="Fight: For each of your Avengers Heroes, rescue a Bystander."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -124,14 +124,14 @@
 		<property name="Affiliation" value="SHIELD"/>
 		<property name="Type" value="Covert"/>
 		<property name="Cost" value="4"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="You may KO a SHIELD hero from your hand or discard pile. If you do, you may gain a SHIELD Officer to your hand"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="You may KO a SHIELD Hero from your hand or discard pile. If you do, you may gain a SHIELD Officer to your hand."/>
+		<property name="Text" value="You may KO a SHIELD Hero from your hand or discard pile. If you do, you may gain a SHIELD Officer to your hand."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -143,14 +143,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Instinct"/>
 		<property name="Cost" value="8"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="0+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Draw three cards."/>
 		<property name="SuperAbilityTrigger" value="Instinct"/>
 		<property name="SuperAbility" value="You get +1 Attack for each extra card you've drawn this turn."/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Draw three cards. Instinct: You get +1 Attack for each extra card you've draw this turn."/>
+		<property name="Text" value="Draw three cards. Instinct: You get +1 Attack for each extra card you've draw this turn."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -162,14 +162,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="8"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: Recruit an X-Men Hero from the HQ for free."/>
+		<property name="Text" value="Fight: Recruit an X-Men Hero from the HQ for free."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -181,14 +181,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="4"/>
 		<property name="Victory" value="2"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="You can't defeat Blob unless you have an X-Men Hero."/>
+		<property name="Text" value="You can't defeat Blob unless you have an X-Men Hero."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -200,14 +200,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Strength"/>
 		<property name="Cost" value="4"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="1+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="1"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Strength"/>
 		<property name="SuperAbility" value="You get +3 Attack"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Strength: You get +3 Attack."/>
+		<property name="Text" value="Strength: You get +3 Attack."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -218,15 +218,15 @@
 		<property name="HeroOrVillianName" value="Bystander"/>
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
-		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Cost" value="0"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value="1"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value=""/>
+		<property name="Text" value=""/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -238,14 +238,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Ranged"/>
 		<property name="Cost" value="6"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="3+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="3"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Ranged"/>
 		<property name="SuperAbility" value="You get +3 Attack"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Ranged: You get +3 Attack."/>
+		<property name="Text" value="Ranged: You get +3 Attack."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -257,14 +257,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Ranged"/>
 		<property name="Cost" value="4"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="2"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Reveal the top card of your deck. If it's an X-Men Hero, draw it."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Reveal the top card of your deck. If it's an X-Men Hero, draw it."/>
+		<property name="Text" value="Reveal the top card of your deck. If it's an X-Men Hero, draw it."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -276,14 +276,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Covert"/>
 		<property name="Cost" value="5"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Play this card as a copy of another Hero you played this turn. This card is both red and the color you copy"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Play this card as a copy of another Hero you played this turn. This card is both Covert and the color you copy."/>
+		<property name="Text" value="Play this card as a copy of another Hero you played this turn. This card is both Covert and the color you copy."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -295,14 +295,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Tech"/>
 		<property name="Cost" value="5"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="3"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Tech"/>
 		<property name="SuperAbility" value="Choose one: each other player draws a card or each other player discards a card"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Tech: Choose one: each other player draws a card or each other player discards a card."/>
+		<property name="Text" value="Tech: Choose one: each other player draws a card or each other player discards a card."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -314,14 +314,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Covert"/>
 		<property name="Cost" value="4"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="0+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="You get +1 Attack for each Bystander in Your Victory Pile"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="You get +1 Attack for each Bystander in your Victory Pile."/>
+		<property name="Text" value="You get +1 Attack for each Bystander in your Victory Pile."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -333,14 +333,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Strength"/>
 		<property name="Cost" value="5"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="4"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Each player gains a Wound."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Each player gains a Wound."/>
+		<property name="Text" value="Each player gains a Wound."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -352,14 +352,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="10"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: Defeat a Villain in the City for free."/>
+		<property name="Text" value="Fight: Defeat a Villain in the City for free."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -371,14 +371,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="8"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: Each other player reveals an X-Men Hero or gains two wounds."/>
+		<property name="Text" value="Fight: Each other player reveals an X-Men Hero or gains two wounds."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -390,14 +390,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Covert"/>
 		<property name="Cost" value="3"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="2"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Covert"/>
 		<property name="SuperAbility" value="You may KO a card from you hand or discard pile. If you do, rescue a Bystander"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Covert: You may KO a card from your hand or discard pile. If you do, rescue a Bystander."/>
+		<property name="Text" value="Covert: You may KO a card from your hand or discard pile. If you do, rescue a Bystander."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -409,14 +409,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="9"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: You may recruit a Tech or Ranged Hero from the HQ for free."/>
+		<property name="Text" value="Fight: You may recruit a Tech or Ranged Hero from the HQ for free."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -428,14 +428,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="7"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight,Escape"/>
-		<property name="Card Text" value="Fight: KO all your SHIELD Heroes.  Escape: Each player KOs two of their Heroes."/>
+		<property name="Text" value="Fight: KO all your SHIELD Heroes.  Escape: Each player KOs two of their Heroes."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -448,13 +448,13 @@
 		<property name="Type" value="Strength"/>
 		<property name="Cost" value="2"/>
 		<property name="Recruit" value="3"/>
-		<property name="Attack" value=""/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="To play this card, you must discard a card from your hand"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="To play this card, you must discard a card from your hand."/>
+		<property name="Text" value="To play this card, you must discard a card from your hand."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -466,14 +466,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Strength"/>
 		<property name="Cost" value="7"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="5"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Whenever you defeat a Villain of Mastermind this turn, you get +3 Recruit"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Whenever you defeat a Villain or Mastermind this turn, you get +3 Recruit."/>
+		<property name="Text" value="Whenever you defeat a Villain or Mastermind this turn, you get +3 Recruit."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -485,14 +485,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Tech"/>
 		<property name="Cost" value="6"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="4"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="If you would gain a Wound, you may reveal this card and draw a card instead"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="If you would gain a Wound, you may reveal this card and draw a card instead."/>
+		<property name="Text" value="If you would gain a Wound, you may reveal this card and draw a card instead."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -504,14 +504,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="4"/>
 		<property name="Victory" value="2"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight"/>
-		<property name="Card Text" value="Fight: When you draw a new hand of cards at the end of this turn, draw eight cards instead of six."/>
+		<property name="Text" value="Fight: When you draw a new hand of cards at the end of this turn, draw eight cards instead of six."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -523,14 +523,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="3"/>
 		<property name="Victory" value="1"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: Look at the top two cards of your deck. KO one of them and put the other back."/>
+		<property name="Text" value="Fight: Look at the top two cards of your deck. KO one of them and put the other back."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -542,14 +542,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="9"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Always Leads: Doombot Legion. Master Strike: Each player with exactly 6 cards in hand reveals a Tech Hero or puts 2 cards from their hand on top of their deck."/>
+		<property name="Text" value="Always Leads: Doombot Legion. Master Strike: Each player with exactly 6 cards in hand reveals a Tech Hero or puts 2 cards from their hand on top of their deck."/>
 		<property name="MustLeadVillain" value="None"/>
 		<property name="MustLeadHenchmen" value="Doombot Legion"/>
 		<property name="ActionScript" value=""/>
@@ -563,14 +563,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="8"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: Choose one of your X-Men Heores. When you draw a new hand of cards at the end of this turn, add that hero to your hand as a seventh card."/>
+		<property name="Text" value="Fight: Choose one of your X-Men Heores. When you draw a new hand of cards at the end of this turn, add that hero to your hand as a seventh card."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -582,14 +582,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="6"/>
 		<property name="Victory" value="4"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight"/>
-		<property name="Card Text" value="Fight: Draw three cards."/>
+		<property name="Text" value="Fight: Draw three cards."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -601,14 +601,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="4"/>
 		<property name="Victory" value="3"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight"/>
-		<property name="Card Text" value="Fight: Play the top two cards of the Villain Deck."/>
+		<property name="Text" value="Fight: Play the top two cards of the Villain Deck."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -620,14 +620,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Tech"/>
 		<property name="Cost" value="3"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Draw a card."/>
 		<property name="SuperAbilityTrigger" value="Tech"/>
 		<property name="SuperAbility" value="Draw another card"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Draw a card. Tech: Draw another card."/>
+		<property name="Text" value="Draw a card. Tech: Draw another card."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -639,14 +639,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="7"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: You get +4 Recruit."/>
+		<property name="Text" value="Fight: You get +4 Recruit."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -658,14 +658,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Covert"/>
 		<property name="Cost" value="3"/>
-		<property name="Recruit" value="2+"/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="2"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Covert"/>
 		<property name="SuperAbility" value="You may KO a card from you hand or discard pile. If you do, you get +1 Recruit"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Covert: You may KO a card from your hand or discard"/>
+		<property name="Text" value="Covert: You may KO a card from your hand or discard"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -677,14 +677,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Instinct"/>
 		<property name="Cost" value="5"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="2"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Instinct"/>
 		<property name="SuperAbility" value="Draw two cards."/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Instinct: Draw two cards."/>
+		<property name="Text" value="Instinct: Draw two cards."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -696,14 +696,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="4"/>
 		<property name="Victory" value="2"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight,Escape"/>
-		<property name="Card Text" value="Fight: Each player reveals a Ranged Hero or gains a Wound.  Escape: Same effect."/>
+		<property name="Text" value="Fight: Each player reveals a Ranged Hero or gains a Wound.  Escape: Same effect."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -716,13 +716,13 @@
 		<property name="Type" value="Ranged"/>
 		<property name="Cost" value="3"/>
 		<property name="Recruit" value="2"/>
-		<property name="Attack" value=""/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Ranged"/>
 		<property name="SuperAbility" value="Draw a card"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Ranged: Draw a card."/>
+		<property name="Text" value="Ranged: Draw a card."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -735,13 +735,13 @@
 		<property name="Type" value="Ranged"/>
 		<property name="Cost" value="8"/>
 		<property name="Recruit" value="5"/>
-		<property name="Attack" value="0+"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="You can use Recruit points as Attack this turn"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="You can use Recruit as Attack this turn."/>
+		<property name="Text" value="You can use Recruit as Attack this turn."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -753,14 +753,14 @@
 		<property name="Affiliation" value="Spider Friends"/>
 		<property name="Type" value="Instinct"/>
 		<property name="Cost" value="2"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="1"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Reveal the top card of your deck. If that card costs 2 or less, draw it."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Reveal the top card of your deck. If that card costs 2 Cost or less, draw it."/>
+		<property name="Text" value="Reveal the top card of your deck. If that card costs 2 Cost or less, draw it."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -772,14 +772,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="6"/>
 		<property name="Victory" value="4"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Ambush"/>
-		<property name="Card Text" value="Ambush: Green Goblin captures a Bystander."/>
+		<property name="Text" value="Ambush: Green Goblin captures a Bystander."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -791,14 +791,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Strength"/>
 		<property name="Cost" value="3"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="2+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="2"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Strength"/>
 		<property name="SuperAbility" value="You get +1 Attack"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Strength: You get +1 Attack."/>
+		<property name="Text" value="Strength: You get +1 Attack."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -810,14 +810,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="3"/>
 		<property name="Victory" value="1"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: You get +1 Recruit."/>
+		<property name="Text" value="Fight: You get +1 Recruit."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -829,14 +829,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Instinct"/>
 		<property name="Cost" value="3"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="2"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="You may KO a Wound from you hand or discard pile. If you do, draw a card."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="You may KO a Wound from your hand or discard pile. If you do, draw a card."/>
+		<property name="Text" value="You may KO a Wound from your hand or discard pile. If you do, draw a card."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -849,13 +849,13 @@
 		<property name="Type" value="Tech"/>
 		<property name="Cost" value="3"/>
 		<property name="Recruit" value="2"/>
-		<property name="Attack" value=""/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="A villain of your choice captures a Bystander"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="A Villain of your choice captures a Bystander."/>
+		<property name="Text" value="A Villain of your choice captures a Bystander."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -867,14 +867,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value="Instinct"/>
 		<property name="Cost" value="3"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="2"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="If this is the first Hero you played this turn, you may discard  the rest of your hand and draw four cards"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="If this is the first hero you played this turn, you may discard the rest of your hand and draw four cards."/>
+		<property name="Text" value="If this is the first hero you played this turn, you may discard the rest of your hand and draw four cards."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -886,14 +886,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Instinct"/>
 		<property name="Cost" value="7"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="4+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="4"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Reveal the top card of your deck. You get +Attack equal to that card's cost."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Reveal the top card of your deck. You get +Attack equal to that card's cost."/>
+		<property name="Text" value="Reveal the top card of your deck. You get +Attack equal to that card's cost."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -905,14 +905,14 @@
 		<property name="Affiliation" value="SHIELD"/>
 		<property name="Type" value="Tech"/>
 		<property name="Cost" value="3"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="2"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Tech"/>
 		<property name="SuperAbility" value="You get +1 Attack"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Tech: You get +1 Attack."/>
+		<property name="Text" value="Tech: You get +1 Attack."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -924,14 +924,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Strength"/>
 		<property name="Cost" value="8"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="5+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="5"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Strength"/>
 		<property name="SuperAbility" value="You get +5 Attack"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Strength: You get +5 Attack."/>
+		<property name="Text" value="Strength: You get +5 Attack."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -943,14 +943,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="7"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: Draw two cards. Then draw another card for each Hydra Villain in your Victory Pile."/>
+		<property name="Text" value="Fight: Draw two cards. Then draw another card for each Hydra Villain in your Victory Pile."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -962,14 +962,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="3"/>
 		<property name="Victory" value="1"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight"/>
-		<property name="Card Text" value="Fight: You may gain a SHIELD Officer."/>
+		<property name="Text" value="Fight: You may gain a SHIELD Officer."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -982,13 +982,13 @@
 		<property name="Type" value="Instinct"/>
 		<property name="Cost" value="3"/>
 		<property name="Recruit" value="2"/>
-		<property name="Attack" value=""/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Reveal the top card of your deck. Discard it or put it back"/>
 		<property name="SuperAbilityTrigger" value="Instinct"/>
 		<property name="SuperAbility" value="Do the same thing to each other player's deck"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Reveal the top card of your deck. Discard it or put it back.  Instinct: Do the same thing to each other player's deck."/>
+		<property name="Text" value="Reveal the top card of your deck. Discard it or put it back.  Instinct: Do the same thing to each other player's deck."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1000,14 +1000,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Tech"/>
 		<property name="Cost" value="7"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="5"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Whenever you defeat  Villian or Mastermind this turn, rescue three Bystanders."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Whenever you defeat a Villain or Mastermind this turn, rescue three Bystanders."/>
+		<property name="Text" value="Whenever you defeat a Villain or Mastermind this turn, rescue three Bystanders."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1019,14 +1019,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="6"/>
 		<property name="Victory" value="4"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Ambush,Escape"/>
-		<property name="Card Text" value="Ambush: Each palyer KOs two Heroes from their discard pile.  Escape: Each player KOs two Heroes from their hand."/>
+		<property name="Text" value="Ambush: Each palyer KOs two Heroes from their discard pile.  Escape: Each player KOs two Heroes from their hand."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1038,14 +1038,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Instinct"/>
 		<property name="Cost" value="2"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="1"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Instinct"/>
 		<property name="SuperAbility" value="Draw a card"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Instinct: Draw a card."/>
+		<property name="Text" value="Instinct: Draw a card."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1057,14 +1057,14 @@
 		<property name="Affiliation" value="SHIELD"/>
 		<property name="Type" value="Strength"/>
 		<property name="Cost" value="6"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="1+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="1"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="You get +1 Attack for each other SHIELD Hero you played this turn."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="You get +1 Attack for each other SHIELD Hero you played this turn."/>
+		<property name="Text" value="You get +1 Attack for each other SHIELD Hero you played this turn."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1076,14 +1076,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Ranged"/>
 		<property name="Cost" value="4"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="2"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Any Villain you fight on the Rooftops this turn gets -2 Attack"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Any Villain you fight on the Rooftops this turn gets -2 Attack."/>
+		<property name="Text" value="Any Villain you fight on the Rooftops this turn gets -2 Attack."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1095,14 +1095,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="10"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Always Leads: Enemies of Asgard. Master Strike: Each player reveals a Strength Hero or gains a Wound."/>
+		<property name="Text" value="Always Leads: Enemies of Asgard. Master Strike: Each player reveals a Strength Hero or gains a Wound."/>
 		<property name="MustLeadVillain" value="Enemies of Asgard"/>
 		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
@@ -1116,14 +1116,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="6"/>
 		<property name="Victory" value="4"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight"/>
-		<property name="Card Text" value="Fight: For each of your Strength Heroes, KO one of your Heroes."/>
+		<property name="Text" value="Fight: For each of your Strength Heroes, KO one of your Heroes."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1135,14 +1135,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="8"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Always Leads: Brotherhood. Master Strike: Each player reveals an X-Men Hero or discards down to four cards."/>
+		<property name="Text" value="Always Leads: Brotherhood. Master Strike: Each player reveals an X-Men Hero or discards down to four cards."/>
 		<property name="MustLeadVillain" value="Brotherhood"/>
 		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
@@ -1156,14 +1156,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="10"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: KO up to four cards from your discard pile."/>
+		<property name="Text" value="Fight: KO up to four cards from your discard pile."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1175,14 +1175,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value=""/>
+		<property name="Text" value=""/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1194,14 +1194,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="5"/>
 		<property name="Victory" value="3"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight"/>
-		<property name="Card Text" value="Fight: Each player reveals the top card of their deck. For each card, you choose to KO it or put it back."/>
+		<property name="Text" value="Fight: Each player reveals the top card of their deck. For each card, you choose to KO it or put it back."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1214,13 +1214,13 @@
 		<property name="Type" value="Ranged"/>
 		<property name="Cost" value="3"/>
 		<property name="Recruit" value="1"/>
-		<property name="Attack" value=""/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Draw a card"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Draw a card."/>
+		<property name="Text" value="Draw a card."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1232,14 +1232,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Setup: 8 Twists. 12 total Bystanders in the Villain Deck.  Special Rules: Each Villain gets +1 Attack for each Bystander it has.  Twist: Any Villain in the Bank captures 2 Bystanders. Then play the top card of the Villain Deck.  Evil Wins: When 8 Bystanders are carried away by escaping Villains."/>
+		<property name="Text" value="Setup: 8 Twists. 12 total Bystanders in the Villain Deck.  Special Rules: Each Villain gets +1 Attack for each Bystander it has.  Twist: Any Villain in the Bank captures 2 Bystanders. Then play the top card of the Villain Deck.  Evil Wins: When 8 Bystanders are carried away by escaping Villains."/>
 		<property name="MustLeadVillain" value="None"/>
 		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
@@ -1253,14 +1253,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Tech"/>
 		<property name="Cost" value="2"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Draw a card"/>
 		<property name="SuperAbilityTrigger" value="Tech"/>
 		<property name="SuperAbility" value="Rescue a Bystander"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Draw a card. Tech: Rescue a Bystander."/>
+		<property name="Text" value="Draw a card. Tech: Rescue a Bystander."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1272,14 +1272,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="9"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: Choose one: each other play draws a card or each other player discards a card."/>
+		<property name="Text" value="Fight: Choose one: each other play draws a card or each other player discards a card."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1291,14 +1291,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="5"/>
 		<property name="Victory" value="3"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Escape"/>
-		<property name="Card Text" value="Escape: Mystique becomes a Scheme Twist that takes effect immediately."/>
+		<property name="Text" value="Escape: Mystique becomes a Scheme Twist that takes effect immediately."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1310,14 +1310,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="7"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: You get +3 Attack."/>
+		<property name="Text" value="Fight: You get +3 Attack."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1329,14 +1329,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Setup: 8 Twists. Add an extra Henchman group to the Villain Deck.  Twist: Play the top 2 cards of the Villain Deck.  Evil Wins: If 12 Villains escape."/>
+		<property name="Text" value="Setup: 8 Twists. Add an extra Henchman group to the Villain Deck.  Twist: Play the top 2 cards of the Villain Deck.  Evil Wins: If 12 Villains escape."/>
 		<property name="MustLeadVillain" value="None"/>
 		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
@@ -1350,14 +1350,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value="Covert"/>
 		<property name="Cost" value="5"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="2+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="2"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="You get +1 Attack for each other Hero with an odd-numbered cost you played this turn"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="You get +1 Attack for each other Hero with an odd-numbered Cost you played this turn."/>
+		<property name="Text" value="You get +1 Attack for each other Hero with an odd-numbered Cost you played this turn."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1369,14 +1369,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Strength"/>
 		<property name="Cost" value="3"/>
-		<property name="Recruit" value="2+"/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="2"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Strength"/>
 		<property name="SuperAbility" value="You get +2 Recruit"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Strength: You get +2 Recruit."/>
+		<property name="Text" value="Strength: You get +2 Recruit."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1388,14 +1388,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Ranged"/>
 		<property name="Cost" value="3"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="3"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="To play this card, you must discard a card from your hand"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="To play this card, you must discard a card from your hand."/>
+		<property name="Text" value="To play this card, you must discard a card from your hand."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1407,14 +1407,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="8"/>
 		<property name="Victory" value="3"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight"/>
-		<property name="Card Text" value="Fight: Choose a Hero in the HQ for each player. Each player gains that Hero."/>
+		<property name="Text" value="Fight: Choose a Hero in the HQ for each player. Each player gains that Hero."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1426,14 +1426,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Strength"/>
 		<property name="Cost" value="4"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="0+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="You get +1 Attack for each color of Hero you have"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="You get +1 Attack for each color of Hero you have."/>
+		<property name="Text" value="You get +1 Attack for each color of Hero you have."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1445,14 +1445,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Setup: 7 Twists. Each Twist is a Dark Portal.  Twist 1: Put the Dark Portal above the Mastermind. The Mastermind gets +1 Attack.  Twists 2-6: Put the Dark Portal in the leftmost city space that doesn't yet have a Dark Portal. Villians in that city space get +1 Attack.  Twist 7: Evil Wins!"/>
+		<property name="Text" value="Setup: 7 Twists. Each Twist is a Dark Portal.  Twist 1: Put the Dark Portal above the Mastermind. The Mastermind gets +1 Attack.  Twists 2-6: Put the Dark Portal in the leftmost city space that doesn't yet have a Dark Portal. Villians in that city space get +1 Attack.  Twist 7: Evil Wins!"/>
 		<property name="MustLeadVillain" value="None"/>
 		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
@@ -1466,14 +1466,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Instinct"/>
 		<property name="Cost" value="5"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="3"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Each player may reveal an X-men Hero. Each player who does draws a card."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Each player may reveal another X-Men Hero. Each player who does draws a card."/>
+		<property name="Text" value="Each player may reveal another X-Men Hero. Each player who does draws a card."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1485,14 +1485,14 @@
 		<property name="Affiliation" value="SHIELD"/>
 		<property name="Type" value="Tech"/>
 		<property name="Cost" value="8"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Defeat any Villain or Mastermind wholse Attack is less than the number of SHIELD Heroes in the KO pile."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Defeat any Villain or Mastermind whose Attack is less than the number of SHIELD Heroes in the KO pile."/>
+		<property name="Text" value="Defeat any Villain or Mastermind whose Attack is less than the number of SHIELD Heroes in the KO pile."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1504,14 +1504,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Tech"/>
 		<property name="Cost" value="7"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Draw two cards"/>
 		<property name="SuperAbilityTrigger" value="Tech"/>
 		<property name="SuperAbility" value="Draw two more cards"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Draw two cards. Tech: Draw two more cards."/>
+		<property name="Text" value="Draw two cards. Tech: Draw two more cards."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1523,14 +1523,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Instinct"/>
 		<property name="Cost" value="3"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="1"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Draw a card"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Draw a Card."/>
+		<property name="Text" value="Draw a Card."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1542,14 +1542,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value="Instinct"/>
 		<property name="Cost" value="7"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="6"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="You may gain a Wound to your hand. Then each player passes a card from their hand to the player on their left"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="You may gain a Wound to your hand. Then each player passes a card from their hand to the player on their left."/>
+		<property name="Text" value="You may gain a Wound to your hand. Then each player passes a card from their hand to the player on their left."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1561,14 +1561,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="7"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Always Leads: HYDRA. Master Strike: Each player KOs a Hero from their hand."/>
+		<property name="Text" value="Always Leads: HYDRA. Master Strike: Each player KOs a Hero from their hand."/>
 		<property name="MustLeadVillain" value="Hydra"/>
 		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
@@ -1582,14 +1582,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Setup: 5 twists. 3 additional Twists next to this Scheme.  18 Total Bystanders in the Villian Deck.  Special Rules: Bystanders in the Villain Deck count as Killbot Villains, with Attack equal to the number of Twists next to this Scheme.  Twist: Put the Twist next to this Scheme.  Evil Wins: If 5 Killbots escape."/>
+		<property name="Text" value="Setup: 5 twists. 3 additional Twists next to this Scheme.  18 Total Bystanders in the Villian Deck.  Special Rules: Bystanders in the Villain Deck count as Killbot Villains, with Attack equal to the number of Twists next to this Scheme.  Twist: Put the Twist next to this Scheme.  Evil Wins: If 5 Killbots escape."/>
 		<property name="MustLeadVillain" value="None"/>
 		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
@@ -1603,14 +1603,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Ranged"/>
 		<property name="Cost" value="3"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="2+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="2"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Ranged"/>
 		<property name="SuperAbility" value="You get +1 Attack"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Ranged: You get +1 Attack."/>
+		<property name="Text" value="Ranged: You get +1 Attack."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1622,14 +1622,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="7"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: Look at the top three cards of your deck. KO one, discard one and put one back on top of your deck."/>
+		<property name="Text" value="Fight: Look at the top three cards of your deck. KO one, discard one and put one back on top of your deck."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1641,14 +1641,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="5"/>
 		<property name="Victory" value="3"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight,Escape"/>
-		<property name="Card Text" value="Fight: Each player reveals an X-Men Hero or gains a Wound.  Escape: Same effect."/>
+		<property name="Text" value="Fight: Each player reveals an X-Men Hero or gains a Wound.  Escape: Same effect."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1660,14 +1660,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="3"/>
 		<property name="Victory" value="1"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: When you draw a new hand of cards at the end of this turn, draw an extra card."/>
+		<property name="Text" value="Fight: When you draw a new hand of cards at the end of this turn, draw an extra card."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1679,14 +1679,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value=""/>
+		<property name="Text" value=""/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1698,14 +1698,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Setup: 8 Twists, 6 Heros.  Skrull Villain Group Required.  Shuffle 12 random Heros from the Hero Deck into the Villain Deck.  Special Rules: Heros in the Villain Deck count as Skrull Villains with Attack equal to the Hero's Cost+2. If you defeat that hero, you gain it.  Twist: The highest-cost hero from the HQ moves into the Sewers as a Skrull Villain, as above.  Evil Wins: If 6 Heroes get into the Escaped Villains Pile."/>
+		<property name="Text" value="Setup: 8 Twists, 6 Heros.  Skrull Villain Group Required.  Shuffle 12 random Heros from the Hero Deck into the Villain Deck.  Special Rules: Heros in the Villain Deck count as Skrull Villains with Attack equal to the Hero's Cost+2. If you defeat that hero, you gain it.  Twist: The highest-cost hero from the HQ moves into the Sewers as a Skrull Villain, as above.  Evil Wins: If 6 Heroes get into the Escaped Villains Pile."/>
 		<property name="MustLeadVillain" value="Skrull"/>
 		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
@@ -1719,14 +1719,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="9"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: Take another turn after this one."/>
+		<property name="Text" value="Fight: Take another turn after this one."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1738,14 +1738,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="3"/>
 		<property name="Victory" value="1"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: KO one of your Heroes."/>
+		<property name="Text" value="Fight: KO one of your Heroes."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1757,14 +1757,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Covert"/>
 		<property name="Cost" value="4"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="2"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Covert"/>
 		<property name="SuperAbility" value="You may play the top card of the Villain Deck. If you do, you get +2 Attack"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Covert: You may play the top card of the Villain Deck. If you do, you get +2 Attack."/>
+		<property name="Text" value="Covert: You may play the top card of the Villain Deck. If you do, you get +2 Attack."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1777,13 +1777,13 @@
 		<property name="Type" value=""/>
 		<property name="Cost" value="0"/>
 		<property name="Recruit" value="1"/>
-		<property name="Attack" value=""/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value=""/>
+		<property name="Text" value=""/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1796,13 +1796,13 @@
 		<property name="Type" value=""/>
 		<property name="Cost" value="3"/>
 		<property name="Recruit" value="2"/>
-		<property name="Attack" value=""/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value=""/>
+		<property name="Text" value=""/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1814,14 +1814,14 @@
 		<property name="Affiliation" value="SHIELD"/>
 		<property name="Type" value=""/>
 		<property name="Cost" value="0"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="1"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value=""/>
+		<property name="Text" value=""/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1833,14 +1833,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Covert"/>
 		<property name="Cost" value="7"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="4"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Defeat a Villain or mastermind that has a bystander"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Defeat a Villain or Mastermind that has a Bystander."/>
+		<property name="Text" value="Defeat a Villain or Mastermind that has a Bystander."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1852,14 +1852,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="*"/>
 		<property name="Victory" value="4"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Ambush,Fight"/>
-		<property name="Card Text" value="Ambush: Put the highest-cost Hero from the HQ under this Villain. This Villain's Attack is equal to that Hero's Cost.  Fight: Gain that Hero."/>
+		<property name="Text" value="Ambush: Put the highest-cost Hero from the HQ under this Villain. This Villain's Attack is equal to that Hero's Cost.  Fight: Gain that Hero."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1871,14 +1871,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="*"/>
 		<property name="Victory" value="2"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Ambush,Fight"/>
-		<property name="Card Text" value="Ambush: Put the rightmost Hero from the HQ under this Villain. This Villain's Attack is equal to that Hero's Cost.  Fight: Gain that Hero."/>
+		<property name="Text" value="Ambush: Put the rightmost Hero from the HQ under this Villain. This Villain's Attack is equal to that Hero's Cost.  Fight: Gain that Hero."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1890,14 +1890,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Covert"/>
 		<property name="Cost" value="6"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="4"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="You may move a Villain to a new city space. Rescue any Bystanders captured by that Villain. (If you move a Villain to a city space tha already has a Villain, swap them.)"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="You may move a Villain to a new city space. Rescue any Bystanders captured by that Villain. (If you move a Villain to a city space that already has a Villain, swap them.)"/>
+		<property name="Text" value="You may move a Villain to a new city space. Rescue any Bystanders captured by that Villain. (If you move a Villain to a city space that already has a Villain, swap them.)"/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1909,14 +1909,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Covert"/>
 		<property name="Cost" value="2"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Draw two cards. Then put a card from you hand on top of you deck"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Draw two cards. Then put a card from your hand on top of your deck."/>
+		<property name="Text" value="Draw two cards. Then put a card from your hand on top of your deck."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1928,14 +1928,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Strength"/>
 		<property name="Cost" value="8"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="4"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Each player discards the top card of their deck. Play a copy of each of those cards."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Each player discards the top card of their deck. Play a copy of each of those cards."/>
+		<property name="Text" value="Each player discards the top card of their deck. Play a copy of each of those cards."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1947,14 +1947,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Setup: For 2-3 players, use 8 Twists.  For 4-5 players, use 5 Twists.  If only 2 players, use only 4 Heroes in the Hero Deck.  Twist: KO all of the Heroes in the HQ.  Evil Wins: If the Hero Deck runs out."/>
+		<property name="Text" value="Setup: For 2-3 players, use 8 Twists.  For 4-5 players, use 5 Twists.  If only 2 players, use only 4 Heroes in the Hero Deck.  Twist: KO all of the Heroes in the HQ.  Evil Wins: If the Hero Deck runs out."/>
 		<property name="MustLeadVillain" value="None"/>
 		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
@@ -1968,14 +1968,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="4"/>
 		<property name="Victory" value="2"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight"/>
-		<property name="Card Text" value="Fight: Each player KOs one of their Heroes."/>
+		<property name="Text" value="Fight: Each player KOs one of their Heroes."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -1987,14 +1987,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="6"/>
 		<property name="Victory" value="3*"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Supreme HYDRA is worth +3 Victory Points for each other HYDRA Villain in your Victory Pile."/>
+		<property name="Text" value="Supreme HYDRA is worth +3 Victory Points for each other HYDRA Villain in your Victory Pile."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2007,13 +2007,13 @@
 		<property name="Type" value="Ranged"/>
 		<property name="Cost" value="4"/>
 		<property name="Recruit" value="2"/>
-		<property name="Attack" value="0+"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="If you made 8 or more Recruit points this turn, you get +3 Attack"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="If you made 8 or more Recruit this turn, you get +3 Attack."/>
+		<property name="Text" value="If you made 8 or more Recruit this turn, you get +3 Attack."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2025,14 +2025,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Tech"/>
 		<property name="Cost" value="4"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="2+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="2"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="Avengers"/>
 		<property name="SuperAbility" value="You get +1 Attack"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Avengers: You get +1 Attack."/>
+		<property name="Text" value="Avengers: You get +1 Attack."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2044,14 +2044,14 @@
 		<property name="Affiliation" value="Spider Friends"/>
 		<property name="Type" value="Covert"/>
 		<property name="Cost" value="2"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Reveal the top three cards of your deck. Put any that cost 2 or less into your hand. Put the rest back in any order."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Reveal the top three cards of your deck. Put any that cost 2 Cost or less into your hand. Put the rest back in any order."/>
+		<property name="Text" value="Reveal the top three cards of your deck. Put any that cost 2 Cost or less into your hand. Put the rest back in any order."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2063,14 +2063,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="4"/>
 		<property name="Victory" value="2"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Ambush"/>
-		<property name="Card Text" value="Ambush: Play the top card of the Villain Deck."/>
+		<property name="Text" value="Ambush: Play the top card of the Villain Deck."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2082,14 +2082,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Setup: 8 Twists, Wound stack holds 6 Wounds per player.  Twist: Each player reveals a Tech Hero or Gains a Wound.  Evil Wins: If the Wound stack runs out."/>
+		<property name="Text" value="Setup: 8 Twists, Wound stack holds 6 Wounds per player.  Twist: Each player reveals a Tech Hero or Gains a Wound.  Evil Wins: If the Wound stack runs out."/>
 		<property name="MustLeadVillain" value="None"/>
 		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
@@ -2103,14 +2103,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="3"/>
 		<property name="Victory" value="2"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight"/>
-		<property name="Card Text" value="Fight: If you fight the Lizard in the Sewers, each other play gains a Wound."/>
+		<property name="Text" value="Fight: If you fight the Lizard in the Sewers, each other play gains a Wound."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2122,14 +2122,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Ranged"/>
 		<property name="Cost" value="7"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="5"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Any Villain you fight on the Bridge this turn gets -2 Attack"/>
 		<property name="SuperAbilityTrigger" value="Ranged"/>
 		<property name="SuperAbility" value="The Mastermind gets -2 Attack this turn."/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Any Villain you fight on the Bridge this turn gets -2 Attack. Ranged: The Mastermind gets -2 Attack this turn."/>
+		<property name="Text" value="Any Villain you fight on the Bridge this turn gets -2 Attack. Ranged: The Mastermind gets -2 Attack this turn."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2141,14 +2141,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="9"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: When you draw a new hand of cards at the end of this turn, draw three extra cards."/>
+		<property name="Text" value="Fight: When you draw a new hand of cards at the end of this turn, draw three extra cards."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2160,14 +2160,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="6"/>
-		<property name="Victory" value="2+"/>
+		<property name="Victory" value="2"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Escape"/>
-		<property name="Card Text" value="Ultron is worth +1 Victory Points for each Tech Hero you have among all your cards at the end of the game.  Escape: Each player reveals a Tech Hero or gains a Wound."/>
+		<property name="Text" value="Ultron is worth +1 Victory Points for each Tech Hero you have among all your cards at the end of the game.  Escape: Each player reveals a Tech Hero or gains a Wound."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2179,14 +2179,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Ranged"/>
 		<property name="Cost" value="6"/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="4"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="If a card effect makes you discard this card, you may return this card to you hand."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="If a card effect makes you discard this card, you may return this card to your hand."/>
+		<property name="Text" value="If a card effect makes you discard this card, you may return this card to your hand."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2198,14 +2198,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Setup: 8 Twists. Twist: Put the Twist Next to this Scheme.  Twists 5-6: Each player gains a Wound.  Twist 7: Each player gains 3 Wounds.  Twist 8: Evil Wins!"/>
+		<property name="Text" value="Setup: 8 Twists. Twist: Put the Twist Next to this Scheme.  Twists 5-6: Each player gains a Wound.  Twist 7: Each player gains 3 Wounds.  Twist 8: Evil Wins!"/>
 		<property name="MustLeadVillain" value="None"/>
 		<property name="MustLeadHenchmen" value="None"/>
 		<property name="ActionScript" value=""/>
@@ -2219,14 +2219,14 @@
 		<property name="Affiliation" value="Avengers"/>
 		<property name="Type" value="Instinct"/>
 		<property name="Cost" value="4"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="2+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="2"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="You may KO a Wound from your hand or discard pile. If you do, you get +2 Attack"/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="You may KO a Wound from your hand or discard pile. If you do, you get +2 Attack."/>
+		<property name="Text" value="You may KO a Wound from your hand or discard pile. If you do, you get +2 Attack."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2238,14 +2238,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="10"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: Each other player KOs a Villain from their Victory Pile."/>
+		<property name="Text" value="Fight: Each other player KOs a Villain from their Victory Pile."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2257,14 +2257,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="5"/>
 		<property name="Victory" value="3"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Escape"/>
-		<property name="Card Text" value="You can't defeat Venom unless you have a Covert Hero.  Escape: Each player gains a Wound."/>
+		<property name="Text" value="You can't defeat Venom unless you have a Covert Hero.  Escape: Each player gains a Wound."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2276,14 +2276,14 @@
 		<property name="Affiliation" value="Hydra"/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="5"/>
 		<property name="Victory" value="3"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight,Escape"/>
-		<property name="Card Text" value="Fight: Each player without another Hydra Villain in their Victory Pile gains a Wound.  Escape: Same effect."/>
+		<property name="Text" value="Fight: Each player without another Hydra Villain in their Victory Pile gains a Wound.  Escape: Same effect."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2295,14 +2295,14 @@
 		<property name="Affiliation" value="Spider Friends"/>
 		<property name="Type" value="Tech"/>
 		<property name="Cost" value="2"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value="Rescue a Bystander. Reveal the top card of your deck. If that card costs 2 or less, draw it."/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Rescue a Bystander. Reveal the top card of your deck. If that card costs 2 Cost or less, draw it."/>
+		<property name="Text" value="Rescue a Bystander. Reveal the top card of your deck. If that card costs 2 Cost or less, draw it."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2314,14 +2314,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="4"/>
 		<property name="Victory" value="2"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight"/>
-		<property name="Card Text" value="Fight: If you fight Whirlwind on the Rooftops or Bridge, KO two of your Heroes."/>
+		<property name="Text" value="Fight: If you fight Whirlwind on the Rooftops or Bridge, KO two of your Heroes."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2333,14 +2333,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="10"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: Each other play KOs two Bystanders from their Victory Pile."/>
+		<property name="Text" value="Fight: Each other play KOs two Bystanders from their Victory Pile."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2351,15 +2351,15 @@
 		<property name="HeroOrVillianName" value=""/>
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
-		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value=""/>
+		<property name="Cost" value="0"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="0"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Healing"/>
-		<property name="Card Text" value="Healing: If you don't recruit any Heroes or Defeat any Villians on your turn, you may KO all the wounds from your hand."/>
+		<property name="Text" value="Healing: If you don't recruit any Heroes or Defeat any Villians on your turn, you may KO all the wounds from your hand."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2371,14 +2371,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="8"/>
 		<property name="Victory" value="5"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="Fight: For each of your X-Men Heroes, rescue a Bystander."/>
+		<property name="Text" value="Fight: For each of your X-Men Heroes, rescue a Bystander."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2390,14 +2390,14 @@
 		<property name="Affiliation" value="X-Men"/>
 		<property name="Type" value="Ranged"/>
 		<property name="Cost" value="8"/>
-		<property name="Recruit" value=""/>
-		<property name="Attack" value="6+"/>
+		<property name="Recruit" value="0"/>
+		<property name="Attack" value="6"/>
 		<property name="Victory" value=""/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value="X-Men"/>
 		<property name="SuperAbility" value="You get +2 Attack for each other X-Men Hero you played this turn"/>
 		<property name="VillainAbility" value=""/>
-		<property name="Card Text" value="X-Men: You get +2 Attack for each other X-Men Hero you played this turn."/>
+		<property name="Text" value="X-Men: You get +2 Attack for each other X-Men Hero you played this turn."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2409,14 +2409,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="6"/>
 		<property name="Victory" value="4"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Ambush,Fight,Escape"/>
-		<property name="Card Text" value="Ambush: Each player reveals a Ranged Hero or gains a Wound.  Fight: Choose a player: That player KOs any number of Wounds from their hand and discard pile."/>
+		<property name="Text" value="Ambush: Each player reveals a Ranged Hero or gains a Wound.  Fight: Choose a player: That player KOs any number of Wounds from their hand and discard pile."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>
@@ -2428,14 +2428,14 @@
 		<property name="Affiliation" value=""/>
 		<property name="Type" value=""/>
 		<property name="Cost" value=""/>
-		<property name="Recruit" value=""/>
+		<property name="Recruit" value="0"/>
 		<property name="Attack" value="5"/>
 		<property name="Victory" value="3"/>
 		<property name="PrimaryAbility" value=""/>
 		<property name="SuperAbilityTrigger" value=""/>
 		<property name="SuperAbility" value=""/>
 		<property name="VillainAbility" value="Fight,Escape"/>
-		<property name="Card Text" value="Fight: Each player reveals a Strength Hero or gains a Wound.  Escape: Same effect."/>
+		<property name="Text" value="Fight: Each player reveals a Strength Hero or gains a Wound.  Escape: Same effect."/>
 		<property name="ActionScript" value=""/>
 		<property name="AutoScript" value=""/>
 	</card>	

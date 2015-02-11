@@ -1,18 +1,721 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <templates>
   <blocks>
+    <block type="overlay" id="x-men" src="Proxy/images/xmen_hero.png">
+      <location x="0" y="0"/>
+    </block>
+    <block type="overlay" id="avengers" src="Proxy/images/avenger_hero.png">
+      <location x="0" y="0"/>
+    </block>
+    <block type="overlay" id="shield" src="Proxy/images/shield_hero.png">
+      <location x="0" y="0"/>
+    </block>
+    <block type="overlay" id="spider-friends" src="Proxy/images/spiderfriends_hero.png">
+      <location x="0" y="0"/>
+    </block>
+    <block type="overlay" id="hero-attack" src="Proxy/images/attack_hero.png">
+      <location x="0" y="0"/>
+    </block>
+    <block type="overlay" id="hero-recruit" src="Proxy/images/recruit_hero.png">
+      <location x="0" y="0"/>
+    </block>
+    <block type="overlay" id="empty" src="Proxy/empty.png">
+      <location x="25" y="60"/>
+    </block>
     <block type="text" id="name">
-      <location x="50" y="50"/>
+      <location x="10" y="5"/>
+      <text color="#FFFF00" size="40" font="Proxy/fonts/Percolator-Regular.ttf"/>
+      <border color="#000000" size="2" />
+      <wordwrap height="60" width="494" align="center" valign="near" shrinktofit="True" />
+    </block>
+    <block type="text" id="blankname">
+      <location x="10" y="100"/>
+      <text color="#FFFF00" size="70" font="Proxy/fonts/Percolator-Regular.ttf"/>
+      <border color="#000000" size="2" />
+      <wordwrap height="80" width="494" align="center" valign="near" shrinktofit="True" />
+    </block>
+    <block type="text" id="hero-or-villain-name">
+      <location x="10" y="40"/>
+      <text color="#FFFF00" size="30" font="Proxy/fonts/Percolator-Regular.ttf"/>
+      <border color="#000000" size="2" />
+      <wordwrap height="40" width="494" align="center" valign="near" shrinktofit="True" />
+    </block>
+    <block type="text" id="victorypoints">
+      <location x="450" y="445"/>
+      <text color="#FFFFFF" size="30" font="Proxy/fonts/sylfaen.ttf"/>
+      <border color="#000000" size="2" />
+    </block>
+    <block type="text" id="cost">
+      <location x="390" y="570"/>
+      <text color="#FFFFFF" size="85" font="Proxy/fonts/sylfaen.ttf"/>
+      <border color="#000000" size="4" />
+    </block>
+    <block type="text" id="recruit">
+      <location x="50" y="480"/>
+      <text color="#FFFFFF" size="55" font="Proxy/fonts/sylfaen.ttf"/>
+      <border color="#000000" size="2" />
+    </block>
+    <block type="text" id="attack">
+      <location x="50" y="570"/>
+      <text color="#FFFFFF" size="55" font="Proxy/fonts/sylfaen.ttf"/>
+      <border color="#000000" size="2" />
+    </block>
+    <block type="text" id="vattack">
+      <location x="400" y="575"/>
+      <text color="#FFFFFF" size="85" font="Proxy/fonts/sylfaen.ttf"/>
+      <border color="#000000" size="4" />
+    </block>
+    <block type="text" id="mmattack">
+      <location x="380" y="575"/>
+      <text color="#FFFFFF" size="85" font="Proxy/fonts/sylfaen.ttf"/>
+      <border color="#000000" size="4" />
+    </block>
+    <block type="text" id="hero-text">
+      <location x="120" y="520"/>
+      <text color="#000000" size="20" font="Proxy/fonts/Swis721-Cn-BT-Roman.ttf"/>
+      <wordwrap height="150" width="250" align="near" valign="near" shrinktofit="True" />
+    </block>
+    <block type="text" id="villain-text">
+      <location x="140" y="540"/>
+      <text color="#000000" size="20" font="Proxy/fonts/Swis721-Cn-BT-Roman.ttf"/>
+      <wordwrap height="150" width="250" align="near" valign="near" shrinktofit="True" />
+    </block>
+    <block type="text" id="empty">
+      <location x="420" y="590"/>
       <text color="#000000" size="20"/>
     </block>
   </blocks>
-  <template src="proxy/back.png" default="True">
+  <template src="Proxy/images/blank.png" default="True">
     <matches>
-      <match name="property" value="name" />
+      <match name="CardType" value="Bystander" />
+    </matches>
+    <textblocks>
+      <link block="blankname">
+        <property name="Name"  />
+      </link>
+    </textblocks>
+  </template>
+  <template src="Proxy/images/villain.png">
+    <matches>
+      <match name="CardType" value="Villain" />
     </matches>
     <textblocks>
       <link block="name">
         <property name="Name"  />
+      </link>
+      <link block="hero-or-villain-name">
+        <property name="HeroOrVillianName" />
+      </link>
+      <link block="vattack">
+        <property name="Attack"  />
+      </link>
+      <link block="villain-text">
+        <property name="Text"  />
+      </link>
+      <link block="victorypoints">
+        <property name="Victory" />
+      </link>
+    </textblocks>
+  </template>
+  <template src="Proxy/images/villain.png">
+    <matches>
+      <match name="CardType" value="Henchman Villain" />
+    </matches>
+    <textblocks>
+      <link block="name">
+        <property name="Name"  />
+      </link>
+      <link block="hero-or-villain-name">
+        <property name="HeroOrVillianName" />
+      </link>
+      <link block="vattack">
+        <property name="Attack"  />
+      </link>
+      <link block="villain-text">
+        <property name="Text"  />
+      </link>
+      <link block="victorypoints">
+        <property name="Victory" />
+      </link>
+    </textblocks>
+  </template>
+  <template src="Proxy/images/mastermind.png">
+    <matches>
+      <match name="CardType" value="Mastermind" />
+    </matches>
+    <textblocks>
+      <link block="name">
+        <property name="Name"  />
+      </link>
+      <link block="hero-or-villain-name">
+        <property name="HeroOrVillianName" />
+      </link>
+      <link block="mmattack">
+        <property name="Attack"  />
+      </link>
+      <link block="villain-text">
+        <property name="Text"  />
+      </link>
+      <link block="victorypoints">
+        <property name="Victory" />
+      </link>
+    </textblocks>
+  </template>
+  <template src="Proxy/images/mastermind.png">
+    <matches>
+      <match name="CardType" value="Mastermind Tactic" />
+    </matches>
+    <textblocks>
+      <link block="name">
+        <property name="Name"  />
+      </link>
+      <link block="hero-or-villain-name">
+        <property name="HeroOrVillianName" />
+      </link>
+      <link block="mmattack">
+        <property name="Attack"  />
+      </link>
+      <link block="villain-text">
+        <property name="Text"  />
+      </link>
+      <link block="victorypoints">
+        <property name="Victory" />
+      </link>
+    </textblocks>
+  </template>
+  <template src="Proxy/images/scheme.png">
+    <matches>
+      <match name="CardType" value="Scheme" />
+    </matches>
+    <textblocks>
+      <link block="name">
+        <property name="Name"  />
+      </link>
+      <link block="villain-text">
+        <property name="Text"  />
+      </link>
+    </textblocks>
+  </template>
+  <template src="Proxy/images/scheme.png">
+    <matches>
+      <match name="CardType" value="Wound" />
+    </matches>
+    <textblocks>
+      <link block="name">
+        <property name="Name"  />
+      </link>
+      <link block="villain-text">
+        <property name="Text"  />
+      </link>
+    </textblocks>
+  </template>
+  <template src="Proxy/images/black_hero.png">
+    <matches>
+      <match name="CardType" value="Hero" />
+      <match name="Type" value="Tech" />
+    </matches>
+    <overlayblocks>
+      <conditional>
+        <if property="Affiliation" value="X-Men">
+          <link block="x-men" />
+        </if>
+        <elseif property="Affiliation" value="Avengers">
+          <link block="avengers" />
+        </elseif>
+        <elseif property="Affiliation" value="SHIELD">
+          <link block="shield" />
+        </elseif>
+        <elseif property="Affiliation" value="Spider Friends">
+          <link block="spider-friends" />
+        </elseif>
+        <else>
+          <link block="empty" />
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Recruit" value="0">
+          <link block="empty" />
+        </if>
+        <else>
+          <link block="hero-recruit" />
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Attack" value="0">
+          <link block="empty" />
+        </if>
+        <else>
+          <link block="hero-attack" />
+        </else>
+      </conditional>
+    </overlayblocks>
+    <textblocks>
+      <link block="name">
+        <property name="Name"  />
+      </link>
+      <link block="hero-or-villain-name">
+        <property name="HeroOrVillianName" />
+      </link>
+      <conditional>
+        <if property="Recruit" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="recruit">
+            <property name="Recruit"  />
+          </link>
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Attack" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="attack">
+            <property name="Attack"  />
+          </link>
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Cost" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="cost">
+            <property name="Cost"  />
+          </link>
+        </else>
+      </conditional>
+      <link block="hero-text">
+        <property name="Text"  />
+      </link>
+    </textblocks>
+  </template>
+  <template src="Proxy/images/blue_hero.png">
+    <matches>
+      <match name="CardType" value="Hero" />
+      <match name="Type" value="Covert" />
+    </matches>
+    <overlayblocks>
+      <conditional>
+        <if property="Affiliation" value="X-Men">
+          <link block="x-men" />
+        </if>
+        <elseif property="Affiliation" value="Avengers">
+          <link block="avengers" />
+        </elseif>
+        <elseif property="Affiliation" value="SHIELD">
+          <link block="shield" />
+        </elseif>
+        <elseif property="Affiliation" value="Spider Friends">
+          <link block="spider-friends" />
+        </elseif>
+        <else>
+          <link block="empty" />
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Recruit" value="0">
+          <link block="empty" />
+        </if>
+        <else>
+          <link block="hero-recruit" />
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Attack" value="0">
+          <link block="empty" />
+        </if>
+        <else>
+          <link block="hero-attack" />
+        </else>
+      </conditional>
+    </overlayblocks>
+    <textblocks>
+      <link block="name">
+        <property name="Name"  />
+      </link>
+      <link block="hero-or-villain-name">
+        <property name="HeroOrVillianName" />
+      </link>
+      <conditional>
+        <if property="Recruit" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="recruit">
+            <property name="Recruit"  />
+          </link>
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Attack" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="attack">
+            <property name="Attack"  />
+          </link>
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Cost" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="cost">
+            <property name="Cost"  />
+          </link>
+        </else>
+      </conditional>
+      <link block="hero-text">
+        <property name="Text"  />
+      </link>
+    </textblocks>
+  </template>
+  <template src="Proxy/images/red_hero.png">
+    <matches>
+      <match name="CardType" value="Hero" />
+      <match name="Type" value="Ranged" />
+    </matches>
+    <overlayblocks>
+      <conditional>
+        <if property="Affiliation" value="X-Men">
+          <link block="x-men" />
+        </if>
+        <elseif property="Affiliation" value="Avengers">
+          <link block="avengers" />
+        </elseif>
+        <elseif property="Affiliation" value="SHIELD">
+          <link block="shield" />
+        </elseif>
+        <elseif property="Affiliation" value="Spider Friends">
+          <link block="spider-friends" />
+        </elseif>
+        <else>
+          <link block="empty" />
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Recruit" value="0">
+          <link block="empty" />
+        </if>
+        <else>
+          <link block="hero-recruit" />
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Attack" value="0">
+          <link block="empty" />
+        </if>
+        <else>
+          <link block="hero-attack" />
+        </else>
+      </conditional>
+    </overlayblocks>
+    <textblocks>
+      <link block="name">
+        <property name="Name"  />
+      </link>
+      <link block="hero-or-villain-name">
+        <property name="HeroOrVillianName" />
+      </link>
+      <conditional>
+        <if property="Recruit" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="recruit">
+            <property name="Recruit"  />
+          </link>
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Attack" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="attack">
+            <property name="Attack"  />
+          </link>
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Cost" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="cost">
+            <property name="Cost"  />
+          </link>
+        </else>
+      </conditional>
+      <link block="hero-text">
+        <property name="Text"  />
+      </link>
+    </textblocks>
+  </template>
+  <template src="Proxy/images/green_hero.png">
+    <matches>
+      <match name="CardType" value="Hero" />
+      <match name="Type" value="Strength" />
+    </matches>
+    <overlayblocks>
+      <conditional>
+        <if property="Affiliation" value="X-Men">
+          <link block="x-men" />
+        </if>
+        <elseif property="Affiliation" value="Avengers">
+          <link block="avengers" />
+        </elseif>
+        <elseif property="Affiliation" value="SHIELD">
+          <link block="shield" />
+        </elseif>
+        <elseif property="Affiliation" value="Spider Friends">
+          <link block="spider-friends" />
+        </elseif>
+        <else>
+          <link block="empty" />
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Recruit" value="0">
+          <link block="empty" />
+        </if>
+        <else>
+          <link block="hero-recruit" />
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Attack" value="0">
+          <link block="empty" />
+        </if>
+        <else>
+          <link block="hero-attack" />
+        </else>
+      </conditional>
+    </overlayblocks>
+    <textblocks>
+      <link block="name">
+        <property name="Name"  />
+      </link>
+      <link block="hero-or-villain-name">
+        <property name="HeroOrVillianName" />
+      </link>
+      <conditional>
+        <if property="Recruit" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="recruit">
+            <property name="Recruit"  />
+          </link>
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Attack" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="attack">
+            <property name="Attack"  />
+          </link>
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Cost" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="cost">
+            <property name="Cost"  />
+          </link>
+        </else>
+      </conditional>
+      <link block="hero-text">
+        <property name="Text"  />
+      </link>
+    </textblocks>
+  </template>
+  <template src="Proxy/images/yellow_hero.png">
+    <matches>
+      <match name="CardType" value="Hero" />
+      <match name="Type" value="Instinct" />
+    </matches>
+    <overlayblocks>
+      <conditional>
+        <if property="Affiliation" value="X-Men">
+          <link block="x-men" />
+        </if>
+        <elseif property="Affiliation" value="Avengers">
+          <link block="avengers" />
+        </elseif>
+        <elseif property="Affiliation" value="SHIELD">
+          <link block="shield" />
+        </elseif>
+        <elseif property="Affiliation" value="Spider Friends">
+          <link block="spider-friends" />
+        </elseif>
+        <else>
+          <link block="empty" />
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Recruit" value="0">
+          <link block="empty" />
+        </if>
+        <else>
+          <link block="hero-recruit" />
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Attack" value="0">
+          <link block="empty" />
+        </if>
+        <else>
+          <link block="hero-attack" />
+        </else>
+      </conditional>
+    </overlayblocks>
+    <textblocks>
+      <link block="name">
+        <property name="Name"  />
+      </link>
+      <link block="hero-or-villain-name">
+        <property name="HeroOrVillianName" />
+      </link>
+      <conditional>
+        <if property="Recruit" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="recruit">
+            <property name="Recruit"  />
+          </link>
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Attack" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="attack">
+            <property name="Attack"  />
+          </link>
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Cost" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="cost">
+            <property name="Cost"  />
+          </link>
+        </else>
+      </conditional>
+      <link block="hero-text">
+        <property name="Text"  />
+      </link>
+    </textblocks>
+  </template>
+  <template src="Proxy/images/blank_hero.png">
+    <matches>
+      <match name="CardType" value="Hero" />
+      <match name="Type" value="" />
+    </matches>
+    <overlayblocks>
+      <conditional>
+        <if property="Affiliation" value="X-Men">
+          <link block="x-men" />
+        </if>
+        <elseif property="Affiliation" value="Avengers">
+          <link block="avengers" />
+        </elseif>
+        <elseif property="Affiliation" value="SHIELD">
+          <link block="shield" />
+        </elseif>
+        <elseif property="Affiliation" value="Spider Friends">
+          <link block="spider-friends" />
+        </elseif>
+        <else>
+          <link block="empty" />
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Recruit" value="0">
+          <link block="empty" />
+        </if>
+        <else>
+          <link block="hero-recruit" />
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Attack" value="0">
+          <link block="empty" />
+        </if>
+        <else>
+          <link block="hero-attack" />
+        </else>
+      </conditional>
+    </overlayblocks>
+    <textblocks>
+      <link block="name">
+        <property name="Name"  />
+      </link>
+      <link block="hero-or-villain-name">
+        <property name="HeroOrVillianName" />
+      </link>
+      <conditional>
+        <if property="Recruit" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="recruit">
+            <property name="Recruit"  />
+          </link>
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Attack" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="attack">
+            <property name="Attack"  />
+          </link>
+        </else>
+      </conditional>
+      <conditional>
+        <if property="Cost" value="0">
+          <link block="empty">
+          </link>
+        </if>
+        <else>
+          <link block="cost">
+            <property name="Cost"  />
+          </link>
+        </else>
+      </conditional>
+      <link block="hero-text">
+        <property name="Text"  />
       </link>
     </textblocks>
   </template>

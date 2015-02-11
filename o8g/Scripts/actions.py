@@ -148,10 +148,10 @@ def createTableCards():
 def fillHQ():
     hqArray = eval(getGlobalVariable('hqHeroes'))
     for i in range(5):
-        if hqArray[i] == 'Empty':
+        if hqArray[i] is None:
             shared.Heroes.addViewer(me)
             mvCard = shared.Heroes[0]
-            hqArray[i] = mvCard.name
+            hqArray[i] = mvCard._id
             mvCard.moveToTable(staticPositions['HQ'][str(i+1)]['x'],staticPositions['HQ'][str(i+1)]['y'])
             mvCard.anchor = True
             shared.Heroes.removeViewer(me)
@@ -160,22 +160,52 @@ def fillHQ():
 def triggerCard(card, x = 0, y = 0):
     mute()
     hqArray = eval(getGlobalVariable('hqHeroes'))
-    if card.CardType == 'Hero' or card.CardType == 'Wound':
+    csArray = eval(getGlobalVariable('csVillains'))
+    vilFind = next((i for i, sublist in enumerate(csArray) if sublist is not None if card._id in sublist),-1)
+    if vilFind > -1:
+        if me.AP < int(card.Attack):
+            notify("{} does not have enough Attack points to defeat {}.".format(me,card.Name))
+        else:
+            card.anchor = False
+            for i in csArray[vilFind]:
+                if Card(i).CardType == 'Villain' or Card(i).CardType == 'Henchman Villain':
+                    Card(i).moveTo(me.piles["Victory Points"])
+                else:
+                    Card(i).moveTo(me.Discard)
+            csArray.insert(vilFind,None)
+            csArray.pop(vilFind + 1)
+            me.AP = me.AP - int(card.Attack)
+            setGlobalVariable('csVillains',str(csArray))
+    elif card._id in hqArray or card.name == 'SHIELD Officer':
         if me.RP < int(card.Cost):
             notify("{} does not have enough Recruit points to purchase {}.".format(me,card.Name))
         else:
             card.anchor = False
-            if card.name in hqArray:
-                hqArray.insert(hqArray.index(card.Name),'Empty')
-                card.moveTo(me.Discard)
-                me.RP = me.RP - int(card.Cost)
+            if card._id in hqArray:
+                hqArray.insert(hqArray.index(card._id),None)
+                hqArray.pop(hqArray.index(card._id))
                 setGlobalVariable('hqHeroes',str(hqArray))
-                fillHQ()
-            else:
-                card.moveTo(me.Discard)
+            card.moveTo(me.Discard)
+            me.RP = me.RP - int(card.Cost)
             notify("{} has just recruited {} to help defeat {}.".format(me.name,card.Name,gameMastermind[0]))
+    elif card.CardType == 'Wound' or card.CardType == 'Bystander' and card._id not in hqArray:
+        card.moveTo(me.Discard)
+    elif card.CardType == 'Mastermind':
+        if me.AP < int(card.Attack):
+            notify("{} does not have enough Attack points to defeat {}.".format(me,card.Name))
+        else:
+            mvCard = shared.Masterminds[0]
+            mvCard.moveTo(me.piles['Victory Points'])
+            me.AP = me.AP - int(card.Attack)
+            notify("{} has defeated {} and should perform the following fight effects:".format(me,gameMastermind[0]))
+            notify("{}".format(mvCard.Text))
     else:
         notify("You cannot buy this card as it is not a Hero")
+    fillHQ()
+
+def koCard(card,x=0,y=0):
+    card.moveTo(shared.KO)
+    notify("{} has been KO'ed from the game".format(card.name))
 
 def goToStartTurn(group, x=0,y=0):
     mute()
@@ -208,6 +238,8 @@ def goToEndTurn(group, x = 0, y = 0):
         if not confirm("You have not spent all your recruit points for this turn, are you sure you want to declare end of turn"): return
     elif me.AP > 0:
         if not confirm("You have not spent all your attack points for this turn, are you sure you want to declare end of turn"): return
+    me.RP = 0
+    me.AP = 0
     setGlobalVariable('endofTurn','False')
     myCards = [card for card in table if card.controller == me and card.anchor == False and card.CardType == 'Hero'] + [card for card in me.hand]
     for card in myCards:
@@ -221,9 +253,8 @@ def goToEndTurn(group, x = 0, y = 0):
 def villainDraw():
     mute()
     csArray = eval(getGlobalVariable('csVillains'))
-    myCards = [card for card in table if (card.CardType == 'Villain' or card.CardType == 'Henchman Villain' or card.CardType == 'Hero') and (card.position[0] in range(-376,257) and card.position[1] == -76)]
     try:
-        k = csArray.index('Empty')
+        k = csArray.index(None)
     except ValueError:
         k = 5
     for c in shared.Villains.top(1):
@@ -232,35 +263,81 @@ def villainDraw():
                 csArray = shiftCityScape(k)
             c.moveToTable(staticPositions['CS']['1']['x'],staticPositions['CS']['1']['y'])
             c.anchor = True
-            csArray[0] = c.name
-        if c.CardType == 'Bystander' or c.CardType == 'Scheme Twist' or c.CardType == 'Master Strike':
+            csArray[0] = [c._id]
+        elif c.CardType == 'Scheme Twist' or c.CardType == 'Master Strike':
             c.moveToTable(445,-76)
+        elif c.CardType == 'Bystander':
+            if gameScheme[0] == "Replace Earth's Leaders with Killbots":
+                if k > 0:
+                    csArray = shiftCityScape(k)
+                c.moveToTable(staticPositions['CS']['1']['x'],staticPositions['CS']['1']['y'])
+                c.anchor = True
+                csArray[0] = [c._id]
+            else:
+                c.moveTo(shared.LoadDeck)
+                captureBystander()
+                notify("A bystander has been captured!")
     setGlobalVariable('csVillains',str(csArray))
 
 def shiftCityScape(eIndex):
     mute()
     csArray = eval(getGlobalVariable('csVillains'))
-    myCards = [card for card in table if (card.CardType == 'Villain' or card.CardType == 'Henchman Villain' or card.CardType == 'Hero') and (card.position[0] in range(-376,257) and card.position[1] == -76)]
     if eIndex == 5:
-        for c in myCards:
-            if c.name == csArray[4]:
-                c.moveToTable(-389,-329)
-                c.orientation = Rot90
-                myCards.pop(myCards.index(c))
-                csArray[4] = 'Empty'
-                eIndex = 4
+        for i in csArray[4]:
+            Card(i).moveToTable(-389,-329)
+            Card(i).orientation = Rot90
+        csArray[4] = None
+        eIndex = 4
     if eIndex < 5:
         for i, j in reversed(list(enumerate(csArray))):
             if i < eIndex:
                 csArray[i+1] = csArray[i]
                 if i == 0:
-                    csArray[0] = 'Empty'
-            for c in myCards:
-                if c.name == j:
-                    c.moveToTable(staticPositions['CS'][str(i+2)]['x'],staticPositions['CS'][str(i+2)]['y'])
-                    myCards.pop(myCards.index(c))
-                    break
+                    csArray[0] = None
+    for i in csArray:
+        if i is not None:
+            for j in i:
+                Card(j).moveToTable((staticPositions['CS'][str(csArray.index(i)+1)]['x'] + (-10 * csArray[csArray.index(i)].index(j))),(staticPositions['CS'][str(csArray.index(i)+1)]['y'] + (-10 * csArray[csArray.index(i)].index(j))))
+                Card(j).sendToBack()
     return csArray
+
+def captureBystander():
+    mute()
+    csArray = eval(getGlobalVariable('csVillains'))
+    tableCards = [card for card in table if (card.CardType != 'Scheme' and card.CardType != 'Wound' and card.CardType != 'Bystander' and (card.position[1] == -76 or card.position[1] == -75))]
+    for i in csArray:
+        if i is not None:
+            for c in tableCards:
+                if c._id == i[0] and c.position[0] == staticPositions['CS'][str(csArray.index(i)+1)]['x']:
+                    c.markers[gameMarkers['Bystander Marker']] += 1
+                    break
+            break
+        elif csArray.count(None) == 5:
+            for c in tableCards:
+                if c.CardType == 'Mastermind':
+                    c.markers[gameMarkers['Bystander Marker']] += 1
+                    break
+            break
+
+def sendToCS(card, x=0, y=0):
+    csArray = eval(getGlobalVariable('csVillains'))
+    hqArray = eval(getGlobalVariable('hqHeroes'))
+    if card._id in hqArray:
+        hqArray.insert(hqArray.index(card._id),None)
+        hqArray.pop(hqArray.index(card._id))
+        csArray[0].append(card._id)
+        card.moveToTable(staticPositions['CS']['1']['x'] + -10,(staticPositions['CS']['1']['y'] + -10))
+        card.sendToBack()
+        setGlobalVariable('hqHeroes',str(hqArray))
+    setGlobalVariable('csVillains',str(csArray))
+    fillHQ()
+
+def updatePlayerCounters():
+    me.RP = 0
+    me.AP = 0
+    for c in me.hand:
+        me.RP = me.RP + int(c.Recruit)
+        me.AP = me.AP + int(c.Attack)
 
 def draw(group, x = 0, y = 0):
     if len(shared.LoadDeck) == 0: return
@@ -274,6 +351,7 @@ def drawMany(group, count = None):
     if count == None: count = askInteger("Draw how many cards?", 6)
     for c in group.top(count): c.moveTo(me.hand)
     notify("{} draws {} cards.".format(me, count))
+    updatePlayerCounters()
 
 def dealMany(group, count=None):
     dealerid = int(getGlobalVariable("dealer"))
