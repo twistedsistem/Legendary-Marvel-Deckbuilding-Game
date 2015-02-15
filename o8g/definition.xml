@@ -19,6 +19,8 @@
         <globalvariable name="hqHeroes" value="[None,None,None,None,None]"/>
         <globalvariable name="csVillains" value="[None,None,None,None,None]"/>
         <globalvariable name="playerList" value="[]"/>
+        <globalvariable name="gameScheme" value="[]"/>
+        <globalvariable name="gameMastermind" value="[]"/>
     </globalvariables>
     <card back="cards/back.png" front="cards/front.png" width="126" height="176" cornerRadius="2">
       <property name="Name"  type="String"/>
@@ -48,6 +50,7 @@
         <cardaction menu="Send to Sewers" default="False" execute="sendToCS" />
         <cardaction menu="Buy/Fight/Gain Card" default="True" execute="triggerCard"/>
         <cardaction menu="KO card" default="False" execute="koCard"/>
+        <cardaction menu="Capture Bystander" default="False" execute="captureBystanderSpecific"/>
         <cardaction menu="Get Position" execute="getPosition"/>
         <cardaction menu="Get Owner/Contoller Info" execute="getOwnerandController"/>
     </table>
@@ -78,7 +81,8 @@
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
     </group>
     <group name="Villains" visibility="none" width="63" height="88" icon="groups/deck.png" collapsed="False">
-      <groupaction menu="Fill Villains" default="True" execute="fillVillain" />
+      <groupaction menu="Draw" default="True" execute="villainDraw" />
+      <groupaction menu="Fill Villains" default="False" execute="fillVillain" />
       <groupaction menu="Shuffle" shortcut="ctrl+S" execute="shuffle" />
     </group>
     <group name="MasterMinds" visibility="none" width="63" height="88" icon="groups/deck.png" collapsed="False">

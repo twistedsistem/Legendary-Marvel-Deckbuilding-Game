@@ -41,6 +41,11 @@ def setupGame(group = table, x = 0, y = 0, manual = False):
         for c in shared.Heroes.top(12): c.moveTo(shared.Villains)
     shuffle(shared.Villains)
     fillHQ()
+    for c in table:
+        if c.name == gameMastermind[0]:
+            setGlobalVariable('gameMastermind','['+str(c._id)+']')
+        elif c.name == gameScheme[0]:
+            setGlobalVariable('gameScheme','['+str(c._id)+']')
     setGlobalVariable('doneSetup','True')
     #firstSetup = True
     # notify('The scheme is:  {}'.format(gameScheme))
@@ -168,7 +173,7 @@ def triggerCard(card, x = 0, y = 0):
         else:
             card.anchor = False
             for i in csArray[vilFind]:
-                if Card(i).CardType == 'Villain' or Card(i).CardType == 'Henchman Villain':
+                if Card(i).CardType == 'Villain' or Card(i).CardType == 'Henchman Villain' or Card(i).CardType == 'Bystander':
                     Card(i).moveTo(me.piles["Victory Points"])
                 else:
                     Card(i).moveTo(me.Discard)
@@ -275,7 +280,7 @@ def villainDraw():
                 csArray[0] = [c._id]
             else:
                 c.moveTo(shared.LoadDeck)
-                captureBystander()
+                csArray  = captureBystander()
                 notify("A bystander has been captured!")
     setGlobalVariable('csVillains',str(csArray))
 
@@ -304,13 +309,13 @@ def shiftCityScape(eIndex):
 def captureBystander():
     mute()
     csArray = eval(getGlobalVariable('csVillains'))
+    bystanderCards = [card for card in table if (card.CardType == 'Bystander' and next((i for i, sublist in enumerate(csArray) if sublist is not None if card._id in sublist),-1) == -1)]
     tableCards = [card for card in table if (card.CardType != 'Scheme' and card.CardType != 'Wound' and card.CardType != 'Bystander' and (card.position[1] == -76 or card.position[1] == -75))]
     for i in csArray:
         if i is not None:
-            for c in tableCards:
-                if c._id == i[0] and c.position[0] == staticPositions['CS'][str(csArray.index(i)+1)]['x']:
-                    c.markers[gameMarkers['Bystander Marker']] += 1
-                    break
+            i.append(bystanderCards[0]._id)
+            bystanderCards[0].moveToTable((staticPositions['CS'][str(csArray.index(i)+1)]['x'] + (-10 * csArray[csArray.index(i)].index(bystanderCards[0]._id))),(staticPositions['CS'][str(csArray.index(i)+1)]['y'] + (-10 * csArray[csArray.index(i)].index(bystanderCards[0]._id))))
+            bystanderCards[0].sendToBack()
             break
         elif csArray.count(None) == 5:
             for c in tableCards:
@@ -318,6 +323,32 @@ def captureBystander():
                     c.markers[gameMarkers['Bystander Marker']] += 1
                     break
             break
+    return csArray
+
+def captureBystanderSpecific(card,x=0,y=0):
+    mute()
+    csArray = eval(getGlobalVariable('csVillains'))
+    mmArray = eval(getGlobalVariable('gameMastermind'))
+    schArray = eval(getGlobalVariable('gameScheme'))
+    vilFind = next((i for i, sublist in enumerate(csArray) if sublist is not None if card._id in sublist),-1)
+    bystanderCards = [c for c in table if (c.CardType == 'Bystander' and next((i for i, sublist in enumerate(csArray) if sublist is not None if c._id in sublist),-1) == -1 and c._id not in mmArray and c._id not in schArray)]
+    if vilFind != -1:
+        csArray[vilFind].append(bystanderCards[0]._id)
+        bystanderCards[0].moveToTable((staticPositions['CS'][str(vilFind+1)]['x'] + (-10 * csArray[vilFind].index(bystanderCards[0]._id))),(staticPositions['CS'][str(vilFind+1)]['y'] + (-10 * csArray[vilFind].index(bystanderCards[0]._id))))
+        bystanderCards[0].sendToBack()
+    elif card._id in mmArray:
+        mmArray.append(bystanderCards[0]._id)
+        bystanderCards[0].moveToTable((-572 + (-10 * mmArray.index(bystanderCards[0]._id))),(-75 + (-10 * mmArray.index(bystanderCards[0]._id))))
+        bystanderCards[0].sendToBack()
+    elif card._id in schArray:
+        schArray.append(bystanderCards[0]._id)
+        bystanderCards[0].moveToTable((-572 + (-10 * schArray.index(bystanderCards[0]._id))),(-310 + (-10 * schArray.index(bystanderCards[0]._id))))
+        bystanderCards[0].sendToBack()
+    else:
+        notify("{} can't capture a bystander.".format(card.name))
+    setGlobalVariable('csVillains',str(csArray))
+    setGlobalVariable('gameMastermind',str(mmArray))
+    setGlobalVariable('gameScheme',str(schArray))
 
 def sendToCS(card, x=0, y=0):
     csArray = eval(getGlobalVariable('csVillains'))
